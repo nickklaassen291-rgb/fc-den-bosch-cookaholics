@@ -1,0 +1,2323 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC Den Bosch x Cookaholics | Zakelijke Events in Stadion De Vliert</title>
+    <style>
+        /* @font-face — Cookaholics huisstijl fonts */
+        @font-face {
+            font-family: 'Campton';
+            src: url('fonts/CamptonBook.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Campton';
+            src: url('fonts/CamptonLight.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/PlayfairDisplay-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/PlayfairDisplay-Italic.ttf') format('truetype');
+            font-weight: 400;
+            font-style: italic;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Playfair Display';
+            src: url('fonts/PlayfairDisplay-MediumItalic.ttf') format('truetype');
+            font-weight: 500;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        :root {
+            --zwart: #232323;
+            --donker: #2D2D2D;
+            --grijs: #232323;
+            --lichtgrijs: #666666;
+            --cream: #f9ecde;
+            --cream-dark: #EDCFAB;
+            --wit: #FFFFFF;
+            --lichtbeige: #f9ecde;
+            --coral: #EE6350;
+            --coral-hover: #ff7a68;
+            --goud: #C9A96E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Campton', 'DM Sans', sans-serif;
+            font-weight: 300;
+            color: var(--grijs);
+            background: var(--lichtbeige);
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+
+        em { font-style: italic; color: var(--coral); }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .label {
+            font-family: 'Campton', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+        
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--zwart);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        
+        
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--wit);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            padding: 0.75rem 1.25rem;
+            transition: all 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--coral);
+        }
+        
+        .nav-cta-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .nav-cta {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .nav-cta-outline {
+            color: var(--wit);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+        
+        .nav-cta-outline:hover {
+            background: var(--lichtbeige);
+            color: var(--zwart);
+        }
+        
+        .nav-cta-filled {
+            background: var(--coral);
+            color: var(--wit);
+        }
+        
+        .nav-cta-filled:hover {
+            background: var(--coral-hover);
+        }
+        
+        /* Hero - Split Layout with Quick Facts */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+
+        .hero-bg img.active {
+            opacity: 1;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                rgba(26,26,26,0.85) 0%,
+                rgba(26,26,26,0.6) 40%,
+                rgba(26,26,26,0.3) 100%);
+            z-index: 1;
+        }
+
+        .nav-logo-img {
+            height: 90px;
+            width: auto;
+            margin: -20px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            color: var(--coral);
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            color: var(--wit);
+            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 5vw, 4rem);
+        }
+
+        .hero h1 em {
+            color: var(--coral);
+            font-style: italic;
+        }
+
+        .hero-intro {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.75);
+            max-width: 500px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* Quick Facts Card */
+        .hero-facts {
+            background: rgba(26,26,26,0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem 2.5rem;
+            min-width: 280px;
+        }
+
+        .hero-facts-title {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-fact {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .hero-fact:last-child {
+            border-bottom: none;
+        }
+
+        .hero-fact-label {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .hero-fact-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--coral);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: 'Campton', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: var(--coral);
+            color: var(--wit);
+            border-color: var(--coral);
+        }
+        
+        .btn-primary:hover {
+            background: var(--coral-hover);
+            border-color: var(--coral-hover);
+        }
+        
+        .btn-outline-light {
+            background: transparent;
+            color: var(--wit);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+        .btn-outline-light:hover {
+            background: var(--lichtbeige);
+            color: var(--zwart);
+            border-color: var(--wit);
+        }
+        
+        .btn-outline-dark {
+            background: transparent;
+            color: var(--zwart);
+            border-color: var(--zwart);
+        }
+        
+        .btn-outline-dark:hover {
+            background: var(--zwart);
+            color: var(--wit);
+        }
+        
+        .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--wit);
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.6;
+        }
+        
+        .scroll-indicator span {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--wit), transparent);
+        }
+        
+        /* Intro Section - Dark */
+        .intro {
+            padding: 6rem 0;
+            background: var(--zwart);
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .intro-content .label {
+            margin-bottom: 1rem;
+        }
+
+        .intro-content h2 {
+            color: var(--cream);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-content p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+        
+        .intro-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.15);
+        }
+
+        .intro-stat-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            color: var(--cream);
+            line-height: 1;
+        }
+
+        .intro-stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            margin-top: 0.25rem;
+        }
+        
+        .intro-image {
+            position: relative;
+        }
+        
+        .intro-image-slider {
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .intro-image-slider img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .intro-image-slider img.active {
+            opacity: 1;
+        }
+
+        .intro-slider-dots {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+
+        .intro-slider-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.4);
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            transition: background 0.3s;
+        }
+
+        .intro-slider-dot.active {
+            background: var(--wit);
+        }
+
+        .intro-image-badge {
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            background: var(--coral);
+            color: var(--wit);
+            padding: 1.5rem 2rem;
+            text-align: center;
+        }
+        
+        .intro-image-badge .value {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            line-height: 1;
+        }
+        
+        .intro-image-badge .label {
+            font-size: 0.65rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 0.25rem;
+        }
+        
+        /* Event Types Section - Crème Background */
+        .event-types {
+            padding: 6rem 0;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-types .section-header .label {
+            color: var(--coral);
+        }
+
+        .event-types .section-header h2 {
+            color: var(--zwart);
+        }
+
+        .event-types .section-header p {
+            color: var(--zwart);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header .label {
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            color: var(--zwart);
+        }
+
+        .section-header p {
+            color: var(--grijs);
+            max-width: 600px;
+            margin: 1rem auto 0;
+        }
+
+        .event-types-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .event-type-card {
+            background: var(--cream);
+            border: 1px solid var(--cream-dark);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .event-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--coral);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .event-type-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .event-type-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .event-type-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: var(--coral);
+        }
+
+        .event-type-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .event-type-card h3 {
+            color: var(--zwart);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .event-type-card p {
+            font-size: 0.85rem;
+            color: var(--lichtgrijs);
+            margin-bottom: 1rem;
+        }
+
+        .event-type-price {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--zwart);
+        }
+        
+        .event-type-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--coral);
+            text-decoration: none;
+            margin-top: 1rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s;
+        }
+        
+        .event-type-card:hover .event-type-link {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Event Detail Sections - Dark backgrounds */
+        .event-detail {
+            padding: 6rem 0;
+            background: var(--zwart);
+            color: var(--wit);
+        }
+
+        .event-detail:nth-child(even) {
+            background: var(--donker);
+        }
+
+        .event-detail-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .event-detail:nth-child(even) .event-detail-grid {
+            direction: rtl;
+        }
+
+        .event-detail:nth-child(even) .event-detail-grid > * {
+            direction: ltr;
+        }
+        
+        .event-detail-image {
+            position: relative;
+        }
+        
+        .event-detail-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+        
+        .event-detail-number {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            font-family: 'Playfair Display', serif;
+            font-size: 8rem;
+            font-weight: 400;
+            color: var(--cream);
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        .event-detail-content .label {
+            margin-bottom: 1rem;
+        }
+
+        .event-detail-content h2 {
+            color: var(--cream);
+            margin-bottom: 1rem;
+        }
+
+        .event-detail-content > p {
+            color: rgba(255,255,255,0.85);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .event-detail-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .event-detail-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+        }
+
+        .event-detail-feature svg {
+            width: 20px;
+            height: 20px;
+            color: var(--coral);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .event-detail-feature span {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.85);
+        }
+
+        .event-detail-pricing {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .event-detail-pricing-title {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 1rem;
+        }
+
+        .event-detail-pricing-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .pricing-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+        }
+
+        .pricing-item-label {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pricing-item-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: var(--cream);
+        }
+        
+        /* Ruimtes Section - Crème */
+        .ruimtes {
+            padding: 6rem 0;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ruimtes .section-header .label {
+            color: var(--coral);
+        }
+
+        .ruimtes .section-header h2 {
+            color: var(--zwart);
+        }
+
+        .ruimtes .section-header p {
+            color: var(--zwart);
+        }
+
+
+        /* Ruimtes Accordion */
+        .ruimtes-accordion {
+            border-top: 1px solid rgba(35,35,35,0.15);
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid rgba(35,35,35,0.15);
+        }
+
+        .accordion-trigger {
+            width: 100%;
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
+            align-items: center;
+            gap: 2rem;
+            padding: 1.5rem 0;
+            text-align: left;
+            transition: opacity 0.3s;
+        }
+
+        .accordion-trigger:hover {
+            opacity: 0.8;
+        }
+
+        .accordion-trigger-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--zwart);
+            line-height: 1.1;
+        }
+
+        .accordion-trigger-cap,
+        .accordion-trigger-area {
+            font-family: 'Campton', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: var(--lichtgrijs);
+            white-space: nowrap;
+        }
+
+        .accordion-chevron {
+            width: 20px;
+            height: 20px;
+            color: var(--zwart);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .accordion-item[data-open="true"] .accordion-chevron {
+            transform: rotate(180deg);
+        }
+
+        .accordion-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .accordion-panel-inner {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 2rem;
+            padding: 0 0 2rem;
+        }
+
+        .accordion-panel-text p {
+            color: var(--zwart);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .accordion-panel-text .accordion-fit {
+            font-size: 0.8rem;
+            color: var(--coral);
+            font-weight: 400;
+        }
+
+        .accordion-panel-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            aspect-ratio: 4 / 3;
+        }
+
+        .accordion-panel-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .accordion-panel-image img.active {
+            opacity: 1;
+        }
+
+        .accordion-panel-text .accordion-events {
+            font-family: 'Campton', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--coral);
+            margin-top: 0.75rem;
+            line-height: 1.6;
+            letter-spacing: 0.01em;
+        }
+
+        @media (max-width: 768px) {
+            .accordion-trigger {
+                grid-template-columns: 1fr auto;
+                gap: 1rem;
+            }
+
+            .accordion-trigger-cap,
+            .accordion-trigger-area {
+                display: none;
+            }
+
+            .accordion-panel-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .accordion-panel-image {
+                order: -1;
+            }
+        }
+        
+        /* Calendar Section */
+        .calendar {
+            padding: 6rem 0;
+            background: var(--cream);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            right: -100px;
+            width: 450px;
+            height: 450px;
+            background: url('images/Achtergronden/5.svg') no-repeat center;
+            background-size: contain;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        .calendar-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .calendar-tab {
+            padding: 0.75rem 2rem;
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: transparent;
+            border: 1px solid var(--cream-dark);
+            color: var(--grijs);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .calendar-tab.active,
+        .calendar-tab:hover {
+            background: var(--coral);
+            border-color: var(--coral);
+            color: var(--wit);
+        }
+        
+        .calendar-slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendar-grid {
+            display: flex;
+            gap: 1rem;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            padding: 0.5rem 0;
+        }
+
+        .calendar-card {
+            background: var(--lichtbeige);
+            border: 1px solid var(--cream-dark);
+            padding: 1.5rem;
+            transition: all 0.3s;
+            min-width: calc(25% - 0.75rem);
+            flex-shrink: 0;
+        }
+
+        .calendar-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .calendar-card.highlight {
+            border-color: var(--coral);
+            background: linear-gradient(135deg, #fff 0%, #fef7f5 100%);
+        }
+
+        .calendar-nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .calendar-nav-btn {
+            width: 48px;
+            height: 48px;
+            border: 1px solid var(--cream-dark);
+            background: var(--lichtbeige);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .calendar-nav-btn:hover {
+            background: var(--zwart);
+            border-color: var(--zwart);
+            color: var(--wit);
+        }
+
+        .calendar-nav-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        .calendar-date {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .calendar-day {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            color: var(--zwart);
+            line-height: 1;
+        }
+
+        .calendar-month {
+            font-size: 0.8rem;
+            color: var(--lichtgrijs);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .calendar-weekday {
+            font-size: 0.7rem;
+            font-weight: 400;
+            color: var(--coral);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.25rem;
+        }
+
+        .calendar-card h4 {
+            font-size: 1.1rem;
+            color: var(--zwart);
+            margin-bottom: 0.25rem;
+        }
+
+        .calendar-card p {
+            font-size: 0.85rem;
+            color: var(--lichtgrijs);
+            margin-bottom: 1rem;
+        }
+
+        .calendar-type {
+            display: inline-block;
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+        }
+
+        .calendar-type.wedstrijd {
+            background: var(--zwart);
+            color: var(--wit);
+        }
+        
+        .calendar-type.event {
+            background: var(--goud);
+            color: var(--zwart);
+        }
+        
+        /* Brochure Download CTA */
+        .brochure-cta {
+            padding: 4rem 0;
+            background: var(--zwart);
+        }
+
+        .brochure-cta-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .brochure-cta-text {
+            flex: 1;
+        }
+
+        .brochure-cta-text h2 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .brochure-cta-text p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+        }
+
+        .brochure-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-shrink: 0;
+        }
+
+        .btn-download {
+            background: var(--coral);
+            color: #fff;
+            border-color: var(--coral);
+        }
+
+        .btn-download:hover {
+            background: var(--coral-hover);
+            border-color: var(--coral-hover);
+            color: #fff;
+        }
+
+        .brochure-cta .btn-advies {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.3);
+            font-family: 'Campton', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .brochure-cta .btn-advies:hover {
+            border-color: #fff;
+            background: rgba(255,255,255,0.08);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 0;
+            background: var(--lichtbeige);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -150px;
+            width: 500px;
+            height: 500px;
+            background: url('images/Achtergronden/4.svg') no-repeat center;
+            background-size: contain;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        
+        .testimonial {
+            background: var(--wit);
+            padding: 2.5rem;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 6rem;
+            color: var(--zwart);
+            opacity: 0.15;
+            line-height: 1;
+        }
+        
+        .testimonial-stars {
+            color: var(--coral);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.1em;
+        }
+        
+        .testimonial-quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--zwart);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-top: auto;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--coral);
+            color: var(--wit);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-info strong {
+            display: block;
+            color: var(--zwart);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+        
+        .testimonial-info span {
+            font-size: 0.8rem;
+            color: var(--lichtgrijs);
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            padding: 6rem 0;
+            background: var(--coral);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta em {
+            color: var(--cream);
+        }
+        
+        .final-cta h2 {
+            color: var(--wit);
+            margin-bottom: 1rem;
+        }
+        
+        .final-cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .final-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .btn-dark {
+            background: var(--zwart);
+            color: var(--wit);
+            border-color: var(--zwart);
+        }
+        
+        .btn-dark:hover {
+            background: var(--donker);
+            border-color: var(--donker);
+        }
+        
+        .btn-white {
+            background: var(--lichtbeige);
+            color: var(--zwart);
+            border-color: var(--wit);
+        }
+        
+        .btn-white:hover {
+            background: var(--cream);
+            border-color: var(--cream);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--zwart);
+            padding: 5rem 0 2.5rem;
+            color: var(--wit);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand-logo {
+            height: 120px;
+            width: auto;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-brand-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: rgba(255,255,255,0.7);
+            line-height: 1.7;
+            max-width: 420px;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-brand-text .footer-dropcap {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2rem;
+            float: left;
+            line-height: 1;
+            margin-right: 0.15em;
+            margin-top: 0.05em;
+            color: #fff;
+        }
+
+        .footer-divider {
+            width: 100%;
+            max-width: 420px;
+            height: 1px;
+            background: rgba(255,255,255,0.15);
+            margin-bottom: 2rem;
+        }
+
+        .footer-contact-info {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .footer-contact-info li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-contact-info a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-contact-info a:hover {
+            color: var(--coral);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .footer-socials a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid rgba(255,255,255,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .footer-socials a:hover {
+            border-color: var(--coral);
+            color: var(--coral);
+        }
+
+        .footer-socials svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .footer-right {
+            display: flex;
+            gap: 4rem;
+            padding-top: 0.5rem;
+        }
+
+        .footer-nav h4 {
+            font-family: 'Campton', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-nav ul {
+            list-style: none;
+        }
+
+        .footer-nav li {
+            margin-bottom: 0.9rem;
+        }
+
+        .footer-nav a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-nav a:hover {
+            color: var(--coral);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: rgba(255,255,255,0.3);
+            font-size: 0.8rem;
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                max-width: 100%;
+            }
+
+            .hero-intro {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .intro-grid,
+            .event-detail-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .event-detail:nth-child(even) .event-detail-grid {
+                direction: ltr;
+            }
+
+            .event-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ruimtes-grid {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .ruimte-card.featured,
+            .ruimte-card.standard,
+            .ruimte-card.half {
+                grid-column: auto;
+            }
+
+            .calendar-card {
+                min-width: calc(33.333% - 0.67rem);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .testimonials-grid .testimonial {
+                display: none;
+                animation: testimonialFade 0.6s ease;
+            }
+
+            .testimonials-grid .testimonial.mobile-active {
+                display: flex;
+            }
+
+            @keyframes testimonialFade {
+                from { opacity: 0; transform: translateX(20px); }
+                to { opacity: 1; transform: translateX(0); }
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .event-types-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .calendar-card {
+                min-width: calc(50% - 0.5rem);
+            }
+
+            .brochure-cta-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .brochure-cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .final-cta-buttons {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-right {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="images/Cookaholics-logo_2024_diapositief-wit.svg" alt="Cookaholics" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#events">Events</a></li>
+                <li><a href="#ruimtes">Ruimtes</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta-group">
+                <a href="#brochure" class="nav-cta nav-cta-outline">Brochure</a>
+                <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="nav-cta nav-cta-filled">Kennismaking</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/CookaholicsFCDenBosch-291lr.jpg" alt="Event in Stadion De Vliert" class="active">
+            <img src="images/DSC06628.jpg" alt="Stadion De Vliert veld">
+            <img src="images/DSC06603.jpg" alt="FC Den Bosch team">
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label">Officiële Eventpartner FC Den Bosch</div>
+                <h1>Zakelijk scoren in <em>De Vliert</em></h1>
+                <p class="hero-intro">Stel je voor: je gasten stappen binnen en kijken uit over het veld. De tafels zijn gedekt, de keuken draait. Concept, catering en uitvoering — volledig verzorgd door Cookaholics.</p>
+                <div class="hero-buttons">
+                    <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-primary">
+                        Plan een kennismaking
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="#brochure" class="btn btn-outline-light">Download brochure</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            Ontdek meer
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <div class="label">Wie wij zijn</div>
+                    <h2>Méér dan catering. <em>Eén beleving.</em></h2>
+                    <p>Cookaholics is de officiële eventpartner van FC Den Bosch. Van concept tot uitvoering, van keuken tot styling: alles onder één dak, door één team. Met meer dan 15 jaar ervaring in zakelijke evenementen weten we wat gastvrijheid vraagt.</p>
+                    <p>Stadion De Vliert biedt 7 veelzijdige ruimtes, beschikbaar 7 dagen per week, voor events van 20 tot 500+ gasten. Vertrouwd door Efteling, Van Mossel en Willy Naessens.</p>
+                </div>
+                <div class="intro-image">
+                    <div class="intro-image-slider">
+                        <img src="images/CookaholicsFCDenBosch-408lr.jpg" alt="Culinaire beleving" class="active">
+                        <img src="images/CookaholicsFCDenBosch-291lr.jpg" alt="Event in het stadion">
+                        <img src="images/CookaholicsFCDenBosch-244lr.jpg" alt="Sfeervolle setting">
+                        <div class="intro-slider-dots">
+                            <button class="intro-slider-dot active" data-slide="0"></button>
+                            <button class="intro-slider-dot" data-slide="1"></button>
+                            <button class="intro-slider-dot" data-slide="2"></button>
+                        </div>
+                    </div>
+                    <div class="intro-image-badge">
+                        <div class="value">15+</div>
+                        <div class="label">Jaar ervaring</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Types Overview -->
+    <section class="event-types" id="events">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Onze Events</div>
+                <h2>Kies jouw <em>beleving</em></h2>
+                <p>Van informele borrels tot formele diners. Ontdek welk event bij jouw wensen past.</p>
+            </div>
+            <div class="event-types-grid">
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3>Personeelsfeest</h3>
+                    <p>Bedrijfsfeest, kerstborrel, zomerfeest, jubileum</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3>Relatie-evenement</h3>
+                    <p>Klantendag, relatieborrel, open dag, productlancering</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3>Vergadering & meetings</h3>
+                    <p>Vergaderlocatie, brainstorm, boardroom</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                    </div>
+                    <h3>Kick-off & congressen</h3>
+                    <p>Kick-off, seminar, congres, presentatie</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3>Teambuilding</h3>
+                    <p>Teambuilding, bedrijfsuitje, teamdag</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="event-type-card">
+                    <div class="event-type-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <h3>Culinaire arrangementen</h3>
+                    <p>BBQ, walking dinner, sit-down, foodcourts, lunch</p>
+                    <a href="#contact" class="event-type-link">
+                        Meer info
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Detail 1: Personeelsfeest -->
+    <section class="event-detail" id="event-personeelsfeest">
+        <div class="container">
+            <div class="event-detail-grid">
+                <div class="event-detail-image">
+                    <div class="event-detail-number">01</div>
+                    <img src="images/CookaholicsFCDenBosch-245-lr.jpg" alt="Personeelsfeest in De Vliert">
+                </div>
+                <div class="event-detail-content">
+                    <div class="label">Meest gevraagd</div>
+                    <h2>Personeelsfeest</h2>
+                    <p>Bedrijfsfeest, kerstborrel, zomerfeest of jubileum. In een stadion viert je team het anders. DJ-booth, eigen bar, 7 schermen — geen standaard zaal, maar een locatie met karakter.</p>
+                    <div class="event-detail-features">
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>20-120 personen</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>DJ-booth en 7 schermen</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Eigen bar en entree</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Volledig verzorgd door Cookaholics</span>
+                        </div>
+                    </div>
+                    <div class="event-detail-pricing">
+                        <div class="event-detail-pricing-title">Kostenindicatie</div>
+                        <div class="event-detail-pricing-items">
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Aangeklede borrel</span>
+                                <span class="pricing-item-value">vanaf €45 p.p.</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Sit-down diner</span>
+                                <span class="pricing-item-value">vanaf €62 p.p.</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Walking dinner</span>
+                                <span class="pricing-item-value">vanaf €75 p.p.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-primary">
+                        Plan een kennismaking
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Detail 2: Relatie-evenement -->
+    <section class="event-detail" id="event-relatie-detail">
+        <div class="container">
+            <div class="event-detail-grid">
+                <div class="event-detail-image">
+                    <div class="event-detail-number">02</div>
+                    <img src="images/CookaholicsFCDenBosch-115lr.jpg" alt="Relatie-evenement">
+                </div>
+                <div class="event-detail-content">
+                    <div class="label">Versterk je netwerk</div>
+                    <h2>Relatie-evenement</h2>
+                    <p>Klantendag, relatieborrel, open dag of productlancering. Maak indruk op je belangrijkste relaties in een setting die niemand vergeet.</p>
+                    <div class="event-detail-features">
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>50-300 personen</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>3-gangen diner of walking dinner</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>AV-faciliteiten inbegrepen</span>
+                        </div>
+                        <div class="event-detail-feature">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                            <span>Veldbezoek optioneel</span>
+                        </div>
+                    </div>
+                    <div class="event-detail-pricing">
+                        <div class="event-detail-pricing-title">Kostenindicatie</div>
+                        <div class="event-detail-pricing-items">
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Aangeklede borrel</span>
+                                <span class="pricing-item-value">vanaf €45 p.p.</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Shared diner</span>
+                                <span class="pricing-item-value">vanaf €65 p.p.</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-item-label">Walking dinner</span>
+                                <span class="pricing-item-value">vanaf €75 p.p.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-primary">
+                        Plan een kennismaking
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Ruimtes Section -->
+    <section class="ruimtes" id="ruimtes">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Onze Ruimtes</div>
+                <h2>9 unieke <em>ruimtes</em></h2>
+                <p>Van de skybox tot de bar. Elke ruimte met eigen karakter.</p>
+            </div>
+            <div class="ruimtes-accordion">
+
+                <!-- 1. Businesslounge -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-businesslounge">
+                        <span class="accordion-trigger-name">Businesslounge</span>
+                        <span class="accordion-trigger-cap">500 personen</span>
+                        <span class="accordion-trigger-area">400 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-businesslounge" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Twee bars, meerdere zones en uitzicht over het veld. De Businesslounge biedt 400 m² aan mogelijkheden — van intieme subruimtes tot een volledige zaalopstelling.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering</p>
+                            </div>
+                            <div class="accordion-panel-image" data-slideshow>
+                                <img src="images/businesslounge-1.jpg" alt="Businesslounge" class="active">
+                                <img src="images/businesslounge-2.jpg" alt="Businesslounge">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Supportershome -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-supportershome">
+                        <span class="accordion-trigger-name">Supportershome</span>
+                        <span class="accordion-trigger-cap">500 personen</span>
+                        <span class="accordion-trigger-area">400 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-supportershome" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Volledig vernieuwd en doordrenkt van clubkleuren. Het Supportershome op de begane grond is de grootste ruimte van het stadion — ideaal voor events waar ruimte en sfeer samenkomen.</p>
+                                <p class="accordion-events">BBQ · Foodtruck · Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering · Presentatie</p>
+                            </div>
+                            <div class="accordion-panel-image" data-slideshow>
+                                <img src="images/supportershome-1.jpg" alt="Supportershome" class="active">
+                                <img src="images/supportershome-2.jpg" alt="Supportershome">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Jan Schouten Lounge -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-janschouten">
+                        <span class="accordion-trigger-name">Jan Schouten Lounge</span>
+                        <span class="accordion-trigger-cap">150 personen</span>
+                        <span class="accordion-trigger-area">100 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-janschouten" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Ontworpen door Mister Design als eerbetoon aan clubicoon Jan Schouten. Een lounge met karakter, waar historie en stijl samenkomen in een uitnodigende setting.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering</p>
+                            </div>
+                            <div class="accordion-panel-image">
+                                <img src="images/janschouten-1.jpg" alt="Jan Schouten Lounge" class="active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Victoria Lane -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-victoria">
+                        <span class="accordion-trigger-name">Victoria Lane</span>
+                        <span class="accordion-trigger-cap">50 personen</span>
+                        <span class="accordion-trigger-area">40 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-victoria" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Strak, modern en lichtrijk. Victoria Lane biedt uitzicht op het veld vanuit een eigentijds ingerichte ruimte — perfect voor wie sfeer én stijl zoekt.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner</p>
+                            </div>
+                            <div class="accordion-panel-image" data-slideshow>
+                                <img src="images/victorialane-1.jpg" alt="Victoria Lane" class="active">
+                                <img src="images/victorialane-2.jpg" alt="Victoria Lane">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Den Box -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-denbox">
+                        <span class="accordion-trigger-name">Den Box</span>
+                        <span class="accordion-trigger-cap">50 personen</span>
+                        <span class="accordion-trigger-area">40 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-denbox" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>De warmte van een bruincafé, het uitzicht van een skybox. Den Box combineert authentieke sfeer met panoramisch zicht op het veld — een ruimte met karakter.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                            </div>
+                            <div class="accordion-panel-image" data-slideshow>
+                                <img src="images/denbox-1.jpg" alt="Den Box" class="active">
+                                <img src="images/denbox-2.jpg" alt="Den Box">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. The Lodge 1965 -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-lodge">
+                        <span class="accordion-trigger-name">The Lodge 1965</span>
+                        <span class="accordion-trigger-cap">50 personen</span>
+                        <span class="accordion-trigger-area">40 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-lodge" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Verscholen in de hoek van het stadion met uniek zicht over het veld. The Lodge 1965 is sfeervol, intiem en exclusief — alsof je een privéloge betreedt.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner</p>
+                            </div>
+                            <div class="accordion-panel-image" data-slideshow>
+                                <img src="images/lodge1965-1.jpg" alt="The Lodge 1965" class="active">
+                                <img src="images/lodge1965-2.jpg" alt="The Lodge 1965">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Hoofdtribune -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-hoofdtribune">
+                        <span class="accordion-trigger-name">Hoofdtribune</span>
+                        <span class="accordion-trigger-cap">1000 personen</span>
+                        <span class="accordion-trigger-area">500 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-hoofdtribune" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>De energie van het stadion, ongeëvenaard. De hoofdtribune biedt ruimte voor grote groepen met direct zicht op het veld — inspireert en motiveert als geen andere locatie.</p>
+                                <p class="accordion-events">Presentatie</p>
+                            </div>
+                            <div class="accordion-panel-image">
+                                <img src="images/hoofdtribune-1.jpg" alt="Hoofdtribune" class="active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. Café de Sliert -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-sliert">
+                        <span class="accordion-trigger-name">Café de Sliert</span>
+                        <span class="accordion-trigger-cap">100 personen</span>
+                        <span class="accordion-trigger-area">125 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-sliert" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Ronde bar, warme sfeer, snel vol leven. Café de Sliert op de begane grond is de informele kantine van het stadion — ideaal voor privéfeesten waar het direct klikt.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                            </div>
+                            <div class="accordion-panel-image">
+                                <img src="images/desliert-1.jpg" alt="Café de Sliert" class="active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9. Voetbalcafé -->
+                <div class="accordion-item" data-open="false">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-voetbalcafe">
+                        <span class="accordion-trigger-name">Voetbalcafé</span>
+                        <span class="accordion-trigger-cap">150 personen</span>
+                        <span class="accordion-trigger-area">180 m²</span>
+                        <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="panel-voetbalcafe" role="region">
+                        <div class="accordion-panel-inner">
+                            <div class="accordion-panel-text">
+                                <p>Waar spelers na de wedstrijd samenkomen met familie en vrienden. Het Voetbalcafé op de eerste etage ademt sport en verbinding — een authentieke plek voor borrels met verhaal.</p>
+                                <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                            </div>
+                            <div class="accordion-panel-image">
+                                <img src="images/voetbalcafe-1.jpg" alt="Voetbalcafé" class="active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-outline-dark">Niet zeker welke ruimte? Wij adviseren je</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brochure Download CTA -->
+    <section class="brochure-cta" id="brochure">
+        <div class="container">
+            <div class="brochure-cta-content">
+                <div class="brochure-cta-text">
+                    <h2>Download onze <em>brochure</em></h2>
+                    <p>Alle informatie over ruimtes, arrangementen en prijzen in één document.</p>
+                </div>
+                <div class="brochure-cta-buttons">
+                    <a href="#" class="btn btn-download">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                        Download PDF
+                    </a>
+                    <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn-advies">Liever persoonlijk advies?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Reviews</div>
+                <h2>Wat onze gasten <em>zeggen</em></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★ <span style="font-size:0.8rem;color:var(--goud);margin-left:0.5rem;">9,0</span></div>
+                    <p class="testimonial-quote">"Wordt goed meegedacht, professioneel en zeer vriendelijk personeel. Inmiddels hebben we meerdere malen gebruik gemaakt van de diensten van Cookaholics en elke keer naar volle tevredenheid."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">N</div>
+                        <div class="testimonial-info">
+                            <strong>Nadine</strong>
+                            <span>Waalwijk</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★ <span style="font-size:0.8rem;color:var(--goud);margin-left:0.5rem;">10</span></div>
+                    <p class="testimonial-quote">"Cookaholics heeft voor ons een prachtige feestmiddag georganiseerd, tot in de puntjes verzorgd. Er wordt goed meegedacht en alles wordt uit handen genomen. Snelle communicatie en aardige mensen."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SH</div>
+                        <div class="testimonial-info">
+                            <strong>Stefan Haak</strong>
+                            <span>Tilburg</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">★★★★★ <span style="font-size:0.8rem;color:var(--goud);margin-left:0.5rem;">9,8</span></div>
+                    <p class="testimonial-quote">"Alles is op korte termijn uit handen genomen en goed geregeld. We hadden Cookaholics ingehuurd voor een zakelijk event en alles was top verzorgd qua eten, drinken en faciliteiten. Erg aan te raden!"</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LR</div>
+                        <div class="testimonial-info">
+                            <strong>Luuk Roijakkers</strong>
+                            <span>Tilburg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <h2>Klaar voor de <em>aftrap</em>?</h2>
+            <p>Plan een vrijblijvende kennismaking — op locatie in Stadion De Vliert. Wij denken mee over concept, ruimte en invulling.</p>
+            <div class="final-cta-buttons">
+                <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-dark">Plan een kennismaking</a>
+                <a href="tel:+31852736709" class="btn btn-white">Bel 085-2736709</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-left">
+                    <img src="images/Cookaholics-logo_2024_diapositief-wit.svg" alt="Cookaholics" class="footer-brand-logo">
+                    <p class="footer-brand-text"><span class="footer-dropcap">W</span>ij verzorgen events waarbij eten, service en styling samenkomen. Op locatie in Stadion De Vliert — met één team en één aanspreekpunt.</p>
+                    <div class="footer-divider"></div>
+                    <ul class="footer-contact-info">
+                        <li><a href="#">Stadion De Vliert, Victorialaan 31</a></li>
+                        <li><a href="#">5213 JG 's-Hertogenbosch</a></li>
+                        <li><a href="mailto:info@cookaholics.nl">info@cookaholics.nl</a></li>
+                        <li><a href="tel:+31852736709">085-2736709</a></li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/cookaholics/" target="_blank" rel="noopener" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a href="https://www.facebook.com/cookaholics" target="_blank" rel="noopener" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/cookaholics/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@cookaholics" target="_blank" rel="noopener" aria-label="YouTube">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-right">
+                    <nav class="footer-nav">
+                        <h4>Navigatie</h4>
+                        <ul>
+                            <li><a href="#events">Events</a></li>
+                            <li><a href="#culinair">Culinair</a></li>
+                            <li><a href="#ruimtes">Ruimtes</a></li>
+                            <li><a href="#brochure">Brochure</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <nav class="footer-nav">
+                        <h4>Locatie</h4>
+                        <ul>
+                            <li><a href="#">Stadion De Vliert</a></li>
+                            <li><a href="#">'s-Hertogenbosch</a></li>
+                            <li><a href="https://cookaholics.nl" target="_blank" rel="noopener">cookaholics.nl</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cookaholics x FC Den Bosch. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hero Image Slideshow
+        const heroImages = document.querySelectorAll('.hero-bg img');
+        let currentImage = 0;
+
+        if (heroImages.length > 1) {
+            setInterval(() => {
+                heroImages[currentImage].classList.remove('active');
+                currentImage = (currentImage + 1) % heroImages.length;
+                heroImages[currentImage].classList.add('active');
+            }, 5000);
+        }
+
+        // Intro Image Slider
+        const introImages = document.querySelectorAll('.intro-image-slider img');
+        const introDots = document.querySelectorAll('.intro-slider-dot');
+        let currentIntroSlide = 0;
+
+        function showIntroSlide(index) {
+            introImages[currentIntroSlide].classList.remove('active');
+            introDots[currentIntroSlide].classList.remove('active');
+            currentIntroSlide = index;
+            introImages[currentIntroSlide].classList.add('active');
+            introDots[currentIntroSlide].classList.add('active');
+        }
+
+        if (introImages.length > 1) {
+            introDots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    showIntroSlide(parseInt(dot.dataset.slide));
+                });
+            });
+
+            setInterval(() => {
+                showIntroSlide((currentIntroSlide + 1) % introImages.length);
+            }, 4000);
+        }
+
+        // Ruimtes Accordion
+        document.querySelectorAll('.accordion-trigger').forEach(trigger => {
+            trigger.addEventListener('click', () => {
+                const item = trigger.parentElement;
+                const panel = trigger.nextElementSibling;
+                const isOpen = item.dataset.open === 'true';
+
+                // Close all items
+                document.querySelectorAll('.accordion-item').forEach(i => {
+                    i.dataset.open = 'false';
+                    i.querySelector('.accordion-trigger').setAttribute('aria-expanded', 'false');
+                    i.querySelector('.accordion-panel').style.maxHeight = null;
+                });
+
+                // Open clicked item if it was closed
+                if (!isOpen) {
+                    item.dataset.open = 'true';
+                    trigger.setAttribute('aria-expanded', 'true');
+                    panel.style.maxHeight = panel.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Image slideshow for rooms with multiple photos
+        document.querySelectorAll('.accordion-panel-image[data-slideshow]').forEach(container => {
+            const imgs = container.querySelectorAll('img');
+            if (imgs.length < 2) return;
+            let current = 0;
+            setInterval(() => {
+                imgs[current].classList.remove('active');
+                current = (current + 1) % imgs.length;
+                imgs[current].classList.add('active');
+            }, 3500);
+        });
+
+        // Mobile testimonial slider
+        function initMobileTestimonials() {
+            const cards = document.querySelectorAll('.testimonials-grid .testimonial');
+            if (cards.length < 2) return;
+            const mq = window.matchMedia('(max-width: 768px)');
+            let interval = null;
+            let current = 0;
+
+            function activate() {
+                cards.forEach(c => c.classList.remove('mobile-active'));
+                cards[current].classList.add('mobile-active');
+            }
+
+            function start() {
+                activate();
+                interval = setInterval(() => {
+                    current = (current + 1) % cards.length;
+                    activate();
+                }, 4000);
+            }
+
+            function stop() {
+                clearInterval(interval);
+                cards.forEach(c => { c.classList.remove('mobile-active'); c.style.display = ''; });
+            }
+
+            function handleChange(e) {
+                if (e.matches) start(); else stop();
+            }
+
+            mq.addEventListener('change', handleChange);
+            if (mq.matches) start();
+        }
+        initMobileTestimonials();
+    </script>
+</body>
+</html>

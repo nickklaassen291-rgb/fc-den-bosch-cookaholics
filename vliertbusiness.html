@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vliert Business | Vergaderlocatie & evenementenlocatie in Stadion De Vliert, Den Bosch</title>
+    <meta name="description" content="Zakelijke events in Stadion De Vliert, Den Bosch. 9 unieke ruimtes, 7 dagen per week. Van vergaderlocatie tot feestlocatie. Cookaholics — business hospitality partner.">
+    <meta name="keywords" content="vergaderlocatie den bosch, vergaderlocatie brabant, feestlocatie den bosch, evenementenlocatie den bosch, bedrijfsfeest den bosch, kick-off locatie brabant, vergaderlocatie in stadion">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --zwart: #232323;
+            --donker: #2D2D2D;
+            --lichtgrijs: #666666;
+            --cream: #F9ECDE;
+            --cream-dark: #F0E2D0;
+            --wit: #FFFFFF;
+            --coral: #EE6350;
+            --coral-hover: #ff7a68;
+            --goud: #C9A96E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--zwart);
+            background: var(--cream);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            line-height: 1;
+            letter-spacing: -0.03em;
+        }
+        h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); line-height: 0.95; }
+        h2 { font-size: clamp(1.8rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
+
+        em { font-style: italic; color: var(--coral); }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+        .label {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coral);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header h2 { margin-bottom: 1rem; }
+        .section-header p { color: var(--lichtgrijs); max-width: 560px; margin: 0 auto; font-size: 1.05rem; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.9rem 1.8rem;
+            font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 500;
+            letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+            border: 1px solid transparent; cursor: pointer; transition: all 0.25s;
+        }
+        .btn-primary { background: var(--coral); color: var(--wit); }
+        .btn-primary:hover { background: var(--coral-hover); }
+        .btn-outline { border-color: rgba(255,255,255,0.4); color: var(--wit); background: transparent; }
+        .btn-outline:hover { background: var(--wit); color: var(--zwart); }
+        .btn-outline-dark { border-color: var(--zwart); color: var(--zwart); background: transparent; }
+        .btn-outline-dark:hover { background: var(--zwart); color: var(--wit); }
+        .btn svg { width: 14px; height: 14px; }
+
+        /* ── NAV ── */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: var(--zwart); border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .nav-inner {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0 2rem; height: 60px; max-width: 1400px; margin: 0 auto;
+        }
+        .nav-logo {
+            font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.8rem;
+            letter-spacing: 0.25em; text-transform: uppercase; color: var(--wit);
+            text-decoration: none;
+        }
+        .nav-links { display: flex; gap: 0.25rem; list-style: none; }
+        .nav-links a {
+            color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.7rem;
+            font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+            padding: 0.6rem 1rem; transition: color 0.25s;
+        }
+        .nav-links a:hover { color: var(--wit); }
+        .nav-cta { display: flex; gap: 0.5rem; }
+        .nav-cta .btn { padding: 0.5rem 1.2rem; font-size: 0.65rem; }
+
+        .nav-hamburger {
+            display: none; background: none; border: none; cursor: pointer; padding: 0.5rem;
+        }
+        .nav-hamburger span {
+            display: block; width: 20px; height: 2px; background: var(--wit);
+            margin: 4px 0; transition: all 0.3s;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh; display: flex; align-items: center;
+            position: relative; padding: 100px 0 60px; overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute; inset: 0;
+            background: url('https://placehold.co/1920x1080/2D2D2D/F9ECDE?text=Stadion+De+Vliert') center/cover no-repeat;
+        }
+        .hero-bg::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(35,35,35,0.92) 0%, rgba(35,35,35,0.6) 60%, rgba(35,35,35,0.4) 100%);
+        }
+        .hero-content { position: relative; z-index: 2; max-width: 640px; }
+        .hero h1 { color: var(--wit); margin-bottom: 1.25rem; }
+        .hero h1 em { color: var(--coral); }
+        .hero-sub { color: rgba(255,255,255,0.65); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.7; }
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .hero-stats {
+            position: relative; z-index: 2;
+            display: flex; gap: 2rem; flex-wrap: wrap;
+            margin-top: 4rem; padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+        .hero-stat { text-align: left; }
+        .hero-stat-value {
+            font-family: 'Playfair Display', serif; font-size: 1.6rem;
+            color: var(--coral); font-weight: 500;
+        }
+        .hero-stat-label { color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 0.2rem; }
+
+        /* ── EVENTS ── */
+        .events { padding: 6rem 0; }
+        .events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .event-card {
+            background: var(--wit); padding: 2rem 1.5rem; border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.25s; cursor: default;
+        }
+        .event-card:hover { border-color: var(--coral); transform: translateY(-2px); }
+        .event-card-icon {
+            width: 40px; height: 40px; margin-bottom: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--cream); border-radius: 50%;
+        }
+        .event-card-icon svg { width: 20px; height: 20px; stroke: var(--coral); fill: none; stroke-width: 1.5; }
+        .event-card h3 { margin-bottom: 0.5rem; }
+        .event-card p { font-size: 0.9rem; color: var(--lichtgrijs); line-height: 1.5; }
+        .event-card-link {
+            display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1rem;
+            font-size: 0.75rem; font-weight: 500; color: var(--coral); text-decoration: none;
+            letter-spacing: 0.1em; text-transform: uppercase;
+        }
+        .event-card-link:hover { gap: 0.6rem; }
+
+        /* ── RUIMTES ── */
+        .ruimtes { padding: 6rem 0; background: var(--zwart); color: var(--wit); }
+        .ruimtes .label { color: var(--coral); }
+        .ruimtes .section-header p { color: rgba(255,255,255,0.5); }
+        .ruimtes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .ruimte-card {
+            background: var(--donker); overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.06); transition: all 0.25s;
+        }
+        .ruimte-card:hover { border-color: var(--coral); transform: translateY(-2px); }
+        .ruimte-card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+        .ruimte-card-body { padding: 1.25rem; }
+        .ruimte-card-floor {
+            font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase;
+            color: rgba(255,255,255,0.4); margin-bottom: 0.4rem;
+        }
+        .ruimte-card h3 { color: var(--wit); margin-bottom: 0.4rem; font-size: 1.15rem; }
+        .ruimte-card-note { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+        .ruimte-card-prices { display: flex; gap: 1rem; }
+        .ruimte-card-price {
+            font-size: 0.75rem; color: rgba(255,255,255,0.4);
+        }
+        .ruimte-card-price strong {
+            display: block; font-family: 'Playfair Display', serif;
+            font-size: 1.1rem; color: var(--coral); font-weight: 500;
+        }
+
+        /* ── CONFIGURATOR ── */
+        .configurator { padding: 6rem 0; }
+        .config-steps { margin-top: 2rem; }
+        .config-step { margin-bottom: 3rem; }
+        .config-step-header {
+            display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.25rem;
+        }
+        .config-step-num {
+            font-family: 'Playfair Display', serif; font-size: 1.8rem;
+            color: var(--coral); font-weight: 400; line-height: 1;
+        }
+        .config-step-title { font-size: 1rem; font-weight: 500; letter-spacing: 0.05em; }
+
+        .config-options { display: grid; gap: 0.75rem; }
+        .config-options.cols-3 { grid-template-columns: repeat(3, 1fr); }
+        .config-options.cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+        .config-card {
+            background: var(--wit); border: 2px solid transparent;
+            padding: 1.25rem; cursor: pointer; transition: all 0.2s;
+            position: relative;
+        }
+        .config-card:hover { border-color: var(--cream-dark); }
+        .config-card.selected { border-color: var(--coral); background: #FFF8F6; }
+        .config-card h4 { font-size: 1rem; margin-bottom: 0.3rem; }
+        .config-card p { font-size: 0.85rem; color: var(--lichtgrijs); }
+        .config-card-price {
+            font-family: 'Playfair Display', serif; font-size: 1.15rem;
+            color: var(--coral); margin-top: 0.5rem;
+        }
+        .config-card-check {
+            position: absolute; top: 0.75rem; right: 0.75rem;
+            width: 22px; height: 22px; border: 2px solid var(--cream-dark);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            transition: all 0.2s;
+        }
+        .config-card.selected .config-card-check {
+            background: var(--coral); border-color: var(--coral);
+        }
+        .config-card.selected .config-card-check::after {
+            content: ''; width: 6px; height: 6px; background: var(--wit); border-radius: 50%;
+        }
+
+        .config-room-toggle {
+            display: flex; gap: 0; margin-top: 0.75rem;
+        }
+        .config-room-toggle button {
+            flex: 1; padding: 0.5rem; font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem; font-weight: 500; border: 1px solid var(--cream-dark);
+            background: var(--wit); cursor: pointer; transition: all 0.2s;
+        }
+        .config-room-toggle button:first-child { border-right: none; }
+        .config-room-toggle button.active {
+            background: var(--zwart); color: var(--wit); border-color: var(--zwart);
+        }
+
+        .config-persons {
+            display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+        }
+        .config-persons label { font-weight: 500; font-size: 0.95rem; }
+        .config-persons input {
+            width: 100px; padding: 0.75rem 1rem; border: 2px solid var(--cream-dark);
+            font-family: 'DM Sans', sans-serif; font-size: 1.1rem; font-weight: 500;
+            text-align: center; outline: none; transition: border-color 0.2s;
+        }
+        .config-persons input:focus { border-color: var(--coral); }
+
+        .config-summary {
+            background: var(--zwart); color: var(--wit); padding: 2.5rem;
+            margin-top: 2rem;
+        }
+        .config-summary h3 { color: var(--wit); margin-bottom: 1.5rem; font-size: 1.3rem; }
+        .config-summary-line {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 0.6rem 0; font-size: 0.9rem;
+        }
+        .config-summary-line span:first-child { color: rgba(255,255,255,0.6); }
+        .config-summary-line span:last-child { color: var(--wit); font-weight: 500; }
+        .config-summary-divider {
+            border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 0.75rem 0;
+        }
+        .config-summary-total {
+            display: flex; justify-content: space-between; align-items: baseline;
+            padding: 0.75rem 0;
+        }
+        .config-summary-total span:first-child {
+            font-size: 1rem; font-weight: 500; color: var(--wit);
+        }
+        .config-summary-total span:last-child {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            color: var(--coral); font-weight: 500;
+        }
+        .config-summary-pp {
+            text-align: right; font-size: 0.85rem; color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+        }
+        .config-summary .btn { width: 100%; justify-content: center; }
+
+        /* ── CULINAIR ── */
+        .culinair { padding: 6rem 0; background: var(--wit); }
+        .culinair-intro { max-width: 600px; margin: 0 auto 3rem; text-align: center; }
+        .culinair-intro p { color: var(--lichtgrijs); font-size: 1.05rem; }
+        .culinair-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; }
+        .culinair-card {
+            background: var(--cream); padding: 1.5rem; text-align: center;
+            border: 1px solid transparent; transition: all 0.25s;
+        }
+        .culinair-card:hover { border-color: var(--coral); }
+        .culinair-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+        .culinair-card p { font-size: 0.85rem; color: var(--lichtgrijs); margin-bottom: 0.75rem; line-height: 1.5; }
+        .culinair-card-price {
+            font-family: 'Playfair Display', serif; font-size: 1.2rem;
+            color: var(--coral); font-weight: 500;
+        }
+        .culinair-note { text-align: center; margin-top: 2rem; color: var(--lichtgrijs); font-size: 0.9rem; }
+        .culinair-note a { color: var(--coral); text-decoration: none; font-weight: 500; }
+        .culinair-note a:hover { text-decoration: underline; }
+
+        /* ── SOCIAL PROOF ── */
+        .social-proof { padding: 6rem 0; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
+        .review-card { background: var(--wit); padding: 2rem; }
+        .review-stars { color: var(--goud); font-size: 1rem; margin-bottom: 1rem; }
+        .review-score {
+            display: inline-block; background: var(--coral); color: var(--wit);
+            font-family: 'Playfair Display', serif; font-size: 0.9rem; font-weight: 500;
+            padding: 0.15rem 0.5rem; margin-left: 0.5rem; vertical-align: middle;
+        }
+        .review-quote { font-size: 0.95rem; line-height: 1.65; color: var(--zwart); margin-bottom: 1.25rem; }
+        .review-author { font-weight: 500; font-size: 0.85rem; }
+        .review-location { color: var(--lichtgrijs); font-size: 0.8rem; }
+
+        .werkwijze { margin-top: 2rem; }
+        .werkwijze-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; margin-top: 2rem; }
+        .werkwijze-step { text-align: center; }
+        .werkwijze-num {
+            font-family: 'Playfair Display', serif; font-size: 2rem;
+            color: var(--coral); margin-bottom: 0.5rem;
+        }
+        .werkwijze-step h4 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+        .werkwijze-step p { font-size: 0.8rem; color: var(--lichtgrijs); line-height: 1.5; }
+
+        /* ── CONTACT ── */
+        .contact { padding: 6rem 0; background: var(--zwart); color: var(--wit); }
+        .contact .label { color: var(--coral); }
+        .contact-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; }
+        .contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .contact-form .full { grid-column: 1 / -1; }
+        .contact-form label {
+            display: block; font-size: 0.75rem; font-weight: 500;
+            letter-spacing: 0.1em; text-transform: uppercase;
+            color: rgba(255,255,255,0.5); margin-bottom: 0.4rem;
+        }
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%; padding: 0.8rem 1rem;
+            background: var(--donker); border: 1px solid rgba(255,255,255,0.1);
+            color: var(--wit); font-family: 'DM Sans', sans-serif; font-size: 0.9rem;
+            outline: none; transition: border-color 0.2s;
+        }
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder { color: rgba(255,255,255,0.3); }
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus { border-color: var(--coral); }
+        .contact-form select { appearance: none; cursor: pointer; }
+        .contact-form select option { background: var(--donker); }
+        .contact-form textarea { resize: vertical; min-height: 100px; }
+        .contact-form .btn { margin-top: 0.5rem; }
+
+        .contact-info { padding-top: 1rem; }
+        .contact-info h3 { color: var(--wit); margin-bottom: 1.5rem; font-size: 1.3rem; }
+        .contact-detail {
+            display: flex; align-items: flex-start; gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .contact-detail-icon {
+            width: 36px; height: 36px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--donker); border-radius: 50%;
+        }
+        .contact-detail-icon svg { width: 16px; height: 16px; stroke: var(--coral); fill: none; }
+        .contact-detail a { color: var(--wit); text-decoration: none; font-size: 0.95rem; }
+        .contact-detail a:hover { color: var(--coral); }
+        .contact-detail p { color: rgba(255,255,255,0.6); font-size: 0.9rem; }
+
+        .contact-brochure {
+            margin-top: 2.5rem; padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .contact-brochure p { color: rgba(255,255,255,0.5); font-size: 0.9rem; margin-bottom: 1rem; }
+
+        /* ── FOOTER ── */
+        .footer {
+            background: var(--zwart); border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 2rem 0; text-align: center;
+        }
+        .footer p { color: rgba(255,255,255,0.3); font-size: 0.8rem; }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .events-grid { grid-template-columns: repeat(2, 1fr); }
+            .ruimtes-grid { grid-template-columns: repeat(2, 1fr); }
+            .culinair-grid { grid-template-columns: repeat(3, 1fr); }
+            .werkwijze-grid { grid-template-columns: repeat(3, 1fr); }
+            .config-options.cols-3 { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-hamburger { display: block; }
+            .nav-mobile {
+                display: none; position: fixed; top: 60px; left: 0; right: 0;
+                background: var(--zwart); padding: 1.5rem 2rem 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
+            .nav-mobile.open { display: block; }
+            .nav-mobile a {
+                display: block; color: rgba(255,255,255,0.7); text-decoration: none;
+                font-size: 0.85rem; padding: 0.75rem 0; letter-spacing: 0.1em;
+                text-transform: uppercase; font-weight: 500;
+            }
+            .nav-mobile a:hover { color: var(--wit); }
+            .nav-mobile .btn { margin-top: 1rem; width: 100%; justify-content: center; }
+
+            .hero { min-height: auto; padding: 120px 0 60px; }
+            .hero-stats { gap: 1.5rem; }
+
+            .events-grid,
+            .ruimtes-grid,
+            .reviews-grid { grid-template-columns: 1fr; }
+
+            .config-options.cols-3,
+            .config-options.cols-2 { grid-template-columns: 1fr; }
+
+            .culinair-grid { grid-template-columns: 1fr 1fr; }
+            .werkwijze-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .contact-form { grid-template-columns: 1fr; }
+            .contact-form .full { grid-column: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="#" class="nav-logo">Cookaholics</a>
+        <ul class="nav-links">
+            <li><a href="#events">Events</a></li>
+            <li><a href="#ruimtes">Ruimtes</a></li>
+            <li><a href="#configurator">Prijzen</a></li>
+            <li><a href="#culinair">Culinair</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-cta">
+            <a href="#contact" class="btn btn-outline" style="font-size:0.65rem;">Brochure</a>
+            <a href="#contact" class="btn btn-primary" style="font-size:0.65rem;">Kennismaking</a>
+        </div>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+<div class="nav-mobile" id="navMobile">
+    <a href="#events">Events</a>
+    <a href="#ruimtes">Ruimtes</a>
+    <a href="#configurator">Prijzen</a>
+    <a href="#culinair">Culinair</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="btn btn-primary">Plan een kennismaking</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <span class="label">Business Hospitality Partner van Stadion De Vliert</span>
+            <h1>Zakelijk scoren in <em>De Vliert</em></h1>
+            <p class="hero-sub">9 unieke ruimtes. 7 dagen per week. Van borrel tot boardroom.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    Plan een kennismaking
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="#contact" class="btn btn-outline">Download brochure</a>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">9</div>
+                <div class="hero-stat-label">Unieke ruimtes</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">7/7</div>
+                <div class="hero-stat-label">Dagen beschikbaar</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">15+</div>
+                <div class="hero-stat-label">Jaar ervaring</div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">500+</div>
+                <div class="hero-stat-label">Max. gasten</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── EVENTS ── -->
+<section class="events" id="events">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Onze events</span>
+            <h2>Kies jouw <em>event</em></h2>
+            <p>Van informele borrels tot formele diners. Ontdek welk event bij jouw wensen past.</p>
+        </div>
+        <div class="events-grid">
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h3>Personeelsfeest</h3>
+                <p>Bedrijfsfeest, kerstborrel, zomerfeest, jubileum</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3>Relatie-evenement</h3>
+                <p>Klantendag, relatieborrel, open dag, productlancering</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                </div>
+                <h3>Vergadering &amp; meetings</h3>
+                <p>Vergaderlocatie, brainstorm, boardroom</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"/></svg>
+                </div>
+                <h3>Kick-off &amp; congressen</h3>
+                <p>Kick-off, seminar, congres, presentatie</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3>Teambuilding</h3>
+                <p>Teambuilding, bedrijfsuitje, teamdag</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+            <div class="event-card">
+                <div class="event-card-icon">
+                    <svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                </div>
+                <h3>Culinair arrangement</h3>
+                <p>BBQ, walking dinner, sit-down, foodcourts, lunch</p>
+                <a href="#configurator" class="event-card-link">Bereken je prijs →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── RUIMTES ── -->
+<section class="ruimtes" id="ruimtes">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Onze ruimtes</span>
+            <h2>9 unieke <em>ruimtes</em></h2>
+            <p>Van exclusieve privé-loge tot groot multifunctioneel feest. Elke ruimte met eigen karakter.</p>
+        </div>
+        <div class="ruimtes-grid" id="ruimtesGrid"></div>
+    </div>
+</section>
+
+<!-- ── CONFIGURATOR ── -->
+<section class="configurator" id="configurator">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Prijscalculator</span>
+            <h2>Bereken je <em>eventprijs</em></h2>
+            <p>Stel je event samen en zie direct een indicatie. Alle prijzen excl. btw.</p>
+        </div>
+
+        <div class="config-steps">
+            <!-- Step 1: Event type -->
+            <div class="config-step">
+                <div class="config-step-header">
+                    <span class="config-step-num">01</span>
+                    <span class="config-step-title">Kies je type event</span>
+                </div>
+                <div class="config-options cols-3" id="configEvents"></div>
+            </div>
+
+            <!-- Step 2: Room -->
+            <div class="config-step">
+                <div class="config-step-header">
+                    <span class="config-step-num">02</span>
+                    <span class="config-step-title">Kies je ruimte</span>
+                </div>
+                <div class="config-options cols-3" id="configRooms"></div>
+            </div>
+
+            <!-- Step 3: Food -->
+            <div class="config-step">
+                <div class="config-step-header">
+                    <span class="config-step-num">03</span>
+                    <span class="config-step-title">Kies je eten</span>
+                </div>
+                <div class="config-options cols-2" id="configFood"></div>
+            </div>
+
+            <!-- Step 4: Drinks -->
+            <div class="config-step">
+                <div class="config-step-header">
+                    <span class="config-step-num">04</span>
+                    <span class="config-step-title">Kies je drinken</span>
+                </div>
+                <div class="config-options cols-2" id="configDrinks"></div>
+            </div>
+
+            <!-- Persons -->
+            <div class="config-persons">
+                <label for="persons">Aantal personen</label>
+                <input type="number" id="persons" value="50" min="1" max="500">
+            </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="config-summary" id="configSummary">
+            <h3>Jouw indicatie</h3>
+            <div id="summaryLines"></div>
+            <hr class="config-summary-divider">
+            <div class="config-summary-total">
+                <span>Totaal excl. btw</span>
+                <span id="summaryTotal">€ 0</span>
+            </div>
+            <div class="config-summary-pp" id="summaryPP">€ 0 per persoon</div>
+            <a href="#contact" class="btn btn-primary">
+                Vraag een offerte op maat aan
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ── CULINAIR ── -->
+<section class="culinair" id="culinair">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Culinair</span>
+            <h2>Cookaholics verzorgt <em>alles</em></h2>
+        </div>
+        <div class="culinair-intro">
+            <p>15+ jaar ervaring. 7 operationele units in Noord-Brabant. Vertrouwd door Efteling, Van Mossel en Willy Naessens. Van borrelarrangement tot walking dinner — wij brengen smaak, sfeer en service.</p>
+        </div>
+        <div class="culinair-grid">
+            <div class="culinair-card">
+                <h3>Borrel</h3>
+                <p>Nootjes, kaas, bitterballen. Informeel en gezellig.</p>
+                <div class="culinair-card-price">vanaf €6 p.p.</div>
+            </div>
+            <div class="culinair-card">
+                <h3>3-gangen diner</h3>
+                <p>Klassiek seizoensmenu aan sfeervol gedekte tafels.</p>
+                <div class="culinair-card-price">€54,50 p.p.</div>
+            </div>
+            <div class="culinair-card">
+                <h3>Shared diner</h3>
+                <p>Samen delen op tafel. Gedeelde voor- en nagerechten.</p>
+                <div class="culinair-card-price">€62,50 p.p.</div>
+            </div>
+            <div class="culinair-card">
+                <h3>4-gangen diner</h3>
+                <p>Uitgebreid diner met extra gang voor de fijnproevers.</p>
+                <div class="culinair-card-price">€62,50 p.p.</div>
+            </div>
+            <div class="culinair-card">
+                <h3>Walking dinner</h3>
+                <p>Kleine gerechten, staand. Netwerken en genieten.</p>
+                <div class="culinair-card-price">€64,50 p.p.</div>
+            </div>
+        </div>
+        <p class="culinair-note">Alle prijzen per persoon, excl. btw. Dranken apart. <a href="#configurator">Gebruik de calculator</a> voor een totaalprijs.</p>
+    </div>
+</section>
+
+<!-- ── SOCIAL PROOF ── -->
+<section class="social-proof" id="reviews">
+    <div class="container">
+        <div class="section-header">
+            <span class="label">Reviews</span>
+            <h2>Wat onze gasten <em>zeggen</em></h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★ <span class="review-score">9,0</span></div>
+                <p class="review-quote">"Wordt goed meegedacht, professioneel en zeer vriendelijk personeel. Inmiddels hebben we meerdere malen gebruik gemaakt van de diensten van Cookaholics en elke keer naar volle tevredenheid."</p>
+                <div class="review-author">Nadine</div>
+                <div class="review-location">Waalwijk</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★ <span class="review-score">10</span></div>
+                <p class="review-quote">"Cookaholics heeft voor ons een prachtige feestmiddag georganiseerd, tot in de puntjes verzorgd. Er wordt goed meegedacht en alles wordt uit handen genomen."</p>
+                <div class="review-author">Stefan Haak</div>
+                <div class="review-location">Tilburg</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★ <span class="review-score">9,8</span></div>
+                <p class="review-quote">"Alles is op korte termijn uit handen genomen en goed geregeld, erg aan te raden!"</p>
+                <div class="review-author">Luuk Roijakkers</div>
+                <div class="review-location">Tilburg</div>
+            </div>
+        </div>
+
+        <div class="werkwijze">
+            <div class="section-header">
+                <span class="label">Werkwijze</span>
+                <h2>Van kennismaking tot <em>staande ovatie</em></h2>
+            </div>
+            <div class="werkwijze-grid">
+                <div class="werkwijze-step">
+                    <div class="werkwijze-num">01</div>
+                    <h4>Kennismaking</h4>
+                    <p>Bel of mail ons. We luisteren naar jullie wensen en denken mee over concept, ruimte en invulling. Vrijblijvend.</p>
+                </div>
+                <div class="werkwijze-step">
+                    <div class="werkwijze-num">02</div>
+                    <h4>Offerte binnen 2 werkdagen</h4>
+                    <p>Na ons gesprek ontvangen jullie binnen 2 werkdagen een offerte met ruimte, menuopties en een helder kostenplaatje. De offerte blijft 3 weken in optie staan.</p>
+                </div>
+                <div class="werkwijze-step">
+                    <div class="werkwijze-num">03</div>
+                    <h4>Voorbereiding</h4>
+                    <p>Twee weken voor het event: definitief aantal gasten en dieetwensen doorgeven. Aanbetaling van 70% op dat moment. Wij briefen ons team en checken de locatie.</p>
+                </div>
+                <div class="werkwijze-step">
+                    <div class="werkwijze-num">04</div>
+                    <h4>Jullie event</h4>
+                    <p>Op de dag zelf coördineert onze partymanager alles — opbouw, service, afbouw. Jullie hoeven alleen je gasten uit te nodigen.</p>
+                </div>
+                <div class="werkwijze-step">
+                    <div class="werkwijze-num">05</div>
+                    <h4>Nazorg</h4>
+                    <p>Persoonlijk evaluatiegesprek en afrekening van de resterende 30%. Jullie feedback maakt elk volgend event beter.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header" style="text-align:left;">
+            <span class="label">Contact</span>
+            <h2 style="color:var(--wit);">Klaar voor de <em>aftrap</em>?</h2>
+        </div>
+        <div class="contact-grid">
+            <form class="contact-form" onsubmit="return false;">
+                <div>
+                    <label for="fname">Naam</label>
+                    <input type="text" id="fname" placeholder="Voornaam en achternaam">
+                </div>
+                <div>
+                    <label for="company">Bedrijf</label>
+                    <input type="text" id="company" placeholder="Bedrijfsnaam">
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="naam@bedrijf.nl">
+                </div>
+                <div>
+                    <label for="phone">Telefoon</label>
+                    <input type="tel" id="phone" placeholder="06 1234 5678">
+                </div>
+                <div>
+                    <label for="eventType">Type event</label>
+                    <select id="eventType">
+                        <option value="">Selecteer een type</option>
+                        <option>Personeelsfeest</option>
+                        <option>Relatie-evenement</option>
+                        <option>Vergadering & meetings</option>
+                        <option>Kick-off & congressen</option>
+                        <option>Teambuilding</option>
+                        <option>Culinair arrangement</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="guestCount">Aantal personen</label>
+                    <input type="number" id="guestCount" placeholder="Bijv. 50">
+                </div>
+                <div class="full">
+                    <label for="eventDate">Gewenste datum</label>
+                    <input type="date" id="eventDate">
+                </div>
+                <div class="full">
+                    <label for="remarks">Opmerkingen</label>
+                    <textarea id="remarks" placeholder="Vertel ons over jullie event..."></textarea>
+                </div>
+                <div class="full">
+                    <button type="submit" class="btn btn-primary">
+                        Verstuur aanvraag
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </button>
+                </div>
+            </form>
+            <div class="contact-info">
+                <h3>Neem contact op</h3>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+                    </div>
+                    <div>
+                        <a href="mailto:info@cookaholics.nl">info@cookaholics.nl</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+                    </div>
+                    <div>
+                        <a href="tel:+31851308353">085 130 8353</a>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <div class="contact-detail-icon">
+                        <svg viewBox="0 0 24 24" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+                    </div>
+                    <div>
+                        <p>Stadion De Vliert</p>
+                        <p>Victorialaan 31</p>
+                        <p>5213 JG 's-Hertogenbosch</p>
+                    </div>
+                </div>
+                <div class="contact-brochure">
+                    <p>Liever eerst onze brochure bekijken?</p>
+                    <a href="#" class="btn btn-outline-dark" style="border-color:rgba(255,255,255,0.3);color:var(--wit);">
+                        Download brochure (PDF)
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M6 20h12a2 2 0 002-2V8l-6-6H6a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2026 Cookaholics — Business Hospitality Partner van Stadion De Vliert. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+
+<script>
+// ── PRICING DATA (exact from context) ──
+const ROOMS = [
+    { name: 'Supportershome', floor: 'Begane grond', halfDay: 750, fullDay: 1400, note: 'Groot & multifunctioneel' },
+    { name: 'Jan Schouten Lounge', floor: '2e etage', halfDay: 500, fullDay: 950, note: 'Meest luxe & modern' },
+    { name: 'Restaurantgedeelte', floor: '2e etage', halfDay: 400, fullDay: 750, note: '' },
+    { name: 'Snijders Bar', floor: '2e etage', halfDay: 400, fullDay: 750, note: 'Werknaam — nieuwe naam volgt' },
+    { name: 'Spelershome', floor: '1e etage', halfDay: 400, fullDay: 750, note: '' },
+    { name: 'Den Box', floor: '2e etage', halfDay: 250, fullDay: 450, note: '' },
+    { name: 'Loge 1965', floor: '2e etage', halfDay: 250, fullDay: 450, note: 'Exclusieve privé-loge' },
+    { name: 'De Sluis', floor: 'Begane grond', halfDay: 250, fullDay: 450, note: 'Klein café' },
+    { name: 'Victoria Lane Box', floor: '2e etage', halfDay: 200, fullDay: 350, note: '' },
+];
+
+const FOOD = [
+    { name: 'Borrelarrangement basic', price: 6.00, desc: 'Nootjes, kaas, 2 bitterballen' },
+    { name: 'Crudité, noten & dumplings', price: 7.00, desc: 'Groentesticks, noten, dumplings' },
+    { name: 'Desem lunch', price: 14.50, desc: '' },
+    { name: 'Focaccia lunch', price: 21.50, desc: '' },
+    { name: '3-gangen diner', price: 54.50, desc: '' },
+    { name: '4-gangen diner', price: 62.50, desc: '' },
+    { name: 'Shared diner', price: 62.50, desc: '' },
+    { name: 'Walking dinner', price: 64.50, desc: '' },
+];
+
+const DRINKS = [
+    { name: 'Koffie, thee & water — 2 uur', price: 12.50 },
+    { name: 'Koffie, thee & water — 3 uur', price: 17.50 },
+    { name: 'Koffie, thee & water — 4 uur', price: 22.50 },
+    { name: 'Bier, wijn & fris — 2 uur', price: 17.50 },
+    { name: 'Bier, wijn & fris — 3 uur', price: 25.00 },
+    { name: 'Bier, wijn & fris — 4 uur', price: 32.50 },
+    { name: 'Bier, wijn & fris — 5 uur', price: 37.50 },
+];
+
+const EVENT_TYPES = [
+    { name: 'Personeelsfeest', desc: 'Bedrijfsfeest, kerstborrel, zomerfeest' },
+    { name: 'Relatie-evenement', desc: 'Klantendag, relatieborrel, open dag' },
+    { name: 'Vergadering & meetings', desc: 'Vergaderlocatie, brainstorm, boardroom' },
+    { name: 'Kick-off & congressen', desc: 'Kick-off, seminar, congres' },
+    { name: 'Teambuilding', desc: 'Teambuilding, bedrijfsuitje, teamdag' },
+    { name: 'Culinair arrangement', desc: 'Walking dinner, sit-down, lunch' },
+];
+
+// ── STATE ──
+let state = {
+    eventType: null,
+    room: null,
+    roomDuration: {},  // roomIndex -> 'half' | 'full'
+    food: null,
+    drink: null,
+};
+
+// ── HELPERS ──
+function fmt(n) {
+    return '€' + n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+}
+function fmtWhole(n) {
+    if (n === Math.floor(n)) return '€' + n.toLocaleString('nl-NL');
+    return fmt(n);
+}
+
+// ── RENDER RUIMTES SECTION ──
+function renderRuimtes() {
+    const grid = document.getElementById('ruimtesGrid');
+    grid.innerHTML = ROOMS.map((r, i) => `
+        <div class="ruimte-card">
+            <img src="https://placehold.co/800x450/${i % 2 === 0 ? 'E8D5C0' : 'D4C4B0'}/232323?text=${encodeURIComponent(r.name)}" alt="${r.name}">
+            <div class="ruimte-card-body">
+                <div class="ruimte-card-floor">${r.floor}</div>
+                <h3>${r.name}</h3>
+                ${r.note ? `<div class="ruimte-card-note">${r.note}</div>` : ''}
+                <div class="ruimte-card-prices">
+                    <div class="ruimte-card-price">
+                        <strong>${fmtWhole(r.halfDay)}</strong>
+                        halve dag
+                    </div>
+                    <div class="ruimte-card-price">
+                        <strong>${fmtWhole(r.fullDay)}</strong>
+                        hele dag
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+}
+
+// ── RENDER CONFIGURATOR ──
+function renderConfig() {
+    // Event types
+    const evContainer = document.getElementById('configEvents');
+    evContainer.innerHTML = EVENT_TYPES.map((e, i) => `
+        <div class="config-card" data-type="event" data-index="${i}">
+            <div class="config-card-check"></div>
+            <h4>${e.name}</h4>
+            <p>${e.desc}</p>
+        </div>
+    `).join('');
+
+    // Rooms
+    const roomContainer = document.getElementById('configRooms');
+    roomContainer.innerHTML = ROOMS.map((r, i) => `
+        <div class="config-card" data-type="room" data-index="${i}">
+            <div class="config-card-check"></div>
+            <h4>${r.name}</h4>
+            <p>${r.floor}${r.note ? ' — ' + r.note : ''}</p>
+            <div class="config-room-toggle">
+                <button class="${(state.roomDuration[i] || 'half') === 'half' ? 'active' : ''}" data-room="${i}" data-dur="half">Halve dag ${fmtWhole(r.halfDay)}</button>
+                <button class="${state.roomDuration[i] === 'full' ? 'active' : ''}" data-room="${i}" data-dur="full">Hele dag ${fmtWhole(r.fullDay)}</button>
+            </div>
+        </div>
+    `).join('');
+
+    // Food
+    const foodContainer = document.getElementById('configFood');
+    foodContainer.innerHTML = FOOD.map((f, i) => `
+        <div class="config-card" data-type="food" data-index="${i}">
+            <div class="config-card-check"></div>
+            <h4>${f.name}</h4>
+            ${f.desc ? `<p>${f.desc}</p>` : '<p>&nbsp;</p>'}
+            <div class="config-card-price">${fmt(f.price)} p.p.</div>
+        </div>
+    `).join('');
+
+    // Drinks
+    const drinkContainer = document.getElementById('configDrinks');
+    drinkContainer.innerHTML = DRINKS.map((d, i) => `
+        <div class="config-card" data-type="drink" data-index="${i}">
+            <div class="config-card-check"></div>
+            <h4>${d.name}</h4>
+            <div class="config-card-price">${fmt(d.price)} p.p.</div>
+        </div>
+    `).join('');
+
+    // Attach listeners
+    document.querySelectorAll('.config-card').forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('.config-room-toggle button')) return;
+            const type = card.dataset.type;
+            const index = parseInt(card.dataset.index);
+            selectOption(type, index);
+        });
+    });
+
+    document.querySelectorAll('.config-room-toggle button').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const roomIdx = parseInt(btn.dataset.room);
+            const dur = btn.dataset.dur;
+            state.roomDuration[roomIdx] = dur;
+            state.room = roomIdx;
+            updateSelectionUI();
+            updateSummary();
+        });
+    });
+}
+
+function selectOption(type, index) {
+    if (type === 'event') state.eventType = index;
+    if (type === 'room') state.room = index;
+    if (type === 'food') state.food = state.food === index ? null : index;
+    if (type === 'drink') state.drink = state.drink === index ? null : index;
+    updateSelectionUI();
+    updateSummary();
+}
+
+function updateSelectionUI() {
+    document.querySelectorAll('.config-card').forEach(card => {
+        const type = card.dataset.type;
+        const index = parseInt(card.dataset.index);
+        let isSelected = false;
+        if (type === 'event') isSelected = state.eventType === index;
+        if (type === 'room') isSelected = state.room === index;
+        if (type === 'food') isSelected = state.food === index;
+        if (type === 'drink') isSelected = state.drink === index;
+        card.classList.toggle('selected', isSelected);
+    });
+
+    // Update room duration toggles
+    document.querySelectorAll('.config-room-toggle button').forEach(btn => {
+        const roomIdx = parseInt(btn.dataset.room);
+        const dur = btn.dataset.dur;
+        const activeDur = state.roomDuration[roomIdx] || 'half';
+        btn.classList.toggle('active', dur === activeDur);
+    });
+}
+
+function updateSummary() {
+    const persons = parseInt(document.getElementById('persons').value) || 50;
+    const lines = document.getElementById('summaryLines');
+    let total = 0;
+    let html = '';
+
+    // Room
+    if (state.room !== null) {
+        const room = ROOMS[state.room];
+        const dur = state.roomDuration[state.room] || 'half';
+        const price = dur === 'full' ? room.fullDay : room.halfDay;
+        total += price;
+        html += `<div class="config-summary-line">
+            <span>Zaalhuur: ${room.name} — ${dur === 'full' ? 'hele dag' : 'halve dag'}</span>
+            <span>${fmtWhole(price)}</span>
+        </div>`;
+    }
+
+    // Food
+    if (state.food !== null) {
+        const food = FOOD[state.food];
+        const foodTotal = food.price * persons;
+        total += foodTotal;
+        html += `<div class="config-summary-line">
+            <span>Food: ${food.name} × ${persons} personen</span>
+            <span>${fmt(foodTotal)}</span>
+        </div>`;
+    }
+
+    // Drinks
+    if (state.drink !== null) {
+        const drink = DRINKS[state.drink];
+        const drinkTotal = drink.price * persons;
+        total += drinkTotal;
+        html += `<div class="config-summary-line">
+            <span>Dranken: ${drink.name} × ${persons} personen</span>
+            <span>${fmt(drinkTotal)}</span>
+        </div>`;
+    }
+
+    if (!html) {
+        html = '<div class="config-summary-line"><span>Maak een selectie hierboven</span><span></span></div>';
+    }
+
+    lines.innerHTML = html;
+    document.getElementById('summaryTotal').textContent = total > 0 ? fmt(total) : '€ 0';
+    document.getElementById('summaryPP').textContent = total > 0 && persons > 0
+        ? fmt(total / persons) + ' per persoon'
+        : '€ 0 per persoon';
+}
+
+// ── MOBILE NAV ──
+document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('navMobile').classList.toggle('open');
+});
+
+// Close mobile nav on link click
+document.querySelectorAll('.nav-mobile a').forEach(a => {
+    a.addEventListener('click', () => {
+        document.getElementById('navMobile').classList.remove('open');
+    });
+});
+
+// ── PERSONS INPUT ──
+document.getElementById('persons').addEventListener('input', updateSummary);
+
+// ── INIT ──
+renderRuimtes();
+renderConfig();
+updateSummary();
+</script>
+</body>
+</html>

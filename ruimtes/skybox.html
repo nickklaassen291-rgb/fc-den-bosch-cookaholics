@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skybox | FC Den Bosch x Cookaholics</title>
+    <meta name="description" content="Exclusieve Skybox privéloge voor 10-20 personen met buitenbalkon en velduitzicht. Premium catering, persoonlijke bediening en volledige privacy voor VIP-events.">
+    <meta name="keywords" content="skybox huren den bosch, vip loge stadion, exclusieve eventlocatie, privé ruimte huren den bosch">
+    <link rel="canonical" href="https://fcdenboschevents.nl/ruimtes/skybox">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --zwart: #232323;
+            --donker: #2D2D2D;
+            --grijs: #232323;
+            --lichtgrijs: #666666;
+            --cream: #F9ECDE;
+            --cream-dark: #F0E2D0;
+            --wit: #FFFFFF;
+            --lichtbeige: #F9ECDE;
+            --coral: #EE6350;
+            --coral-hover: #ff7a68;
+            --goud: #C9A96E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--grijs);
+            background: var(--lichtbeige);
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 0.9;
+            letter-spacing: -0.04em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+        h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+
+        em { font-style: italic; color: var(--coral); }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--zwart);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo svg { height: 45px; width: auto; }
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--wit);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.75rem 1.25rem;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--coral); }
+
+        .nav-cta-group { display: flex; gap: 0.5rem; }
+
+        .nav-cta {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-cta-outline {
+            color: var(--wit);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .nav-cta-outline:hover {
+            background: var(--wit);
+            color: var(--zwart);
+        }
+
+        .nav-cta-filled {
+            background: var(--coral);
+            color: var(--wit);
+        }
+
+        .nav-cta-filled:hover { background: var(--coral-hover); }
+
+        /* Room Hero */
+        .room-hero {
+            min-height: 70vh;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 120px 0 4rem;
+        }
+
+        .room-hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .room-hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .room-hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top,
+                rgba(26,26,26,0.95) 0%,
+                rgba(26,26,26,0.5) 50%,
+                rgba(26,26,26,0.3) 100%);
+        }
+
+        .room-hero-content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .room-hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 4rem;
+            align-items: end;
+        }
+
+        .room-hero-text .label { margin-bottom: 1rem; }
+
+        .room-hero-text h1 {
+            color: var(--wit);
+            margin-bottom: 1rem;
+        }
+
+        .room-hero-text h1 em { color: var(--coral); }
+
+        .room-hero-intro {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+        }
+
+        /* Quick Specs Card */
+        .room-specs-card {
+            background: rgba(26,26,26,0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2rem;
+        }
+
+        .room-specs-title {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 1.5rem;
+        }
+
+        .room-spec {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .room-spec:last-child { border-bottom: none; }
+
+        .room-spec-label {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .room-spec-label svg {
+            width: 18px;
+            height: 18px;
+            color: var(--coral);
+        }
+
+        .room-spec-value {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--wit);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1.5rem 0;
+            background: var(--zwart);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            list-style: none;
+            font-size: 0.8rem;
+        }
+
+        .breadcrumb-list a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb-list a:hover { color: var(--coral); }
+
+        .breadcrumb-list span { color: rgba(255,255,255,0.4); }
+
+        .breadcrumb-list li:last-child { color: var(--coral); }
+
+        /* Room Content */
+        .room-content { padding: 5rem 0; }
+
+        .room-content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+        }
+
+        .room-description h2 {
+            color: var(--zwart);
+            margin-bottom: 1.5rem;
+        }
+
+        .room-description p {
+            color: var(--grijs);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        /* Features List */
+        .room-features { margin: 3rem 0; }
+
+        .room-features h3 {
+            color: var(--zwart);
+            margin-bottom: 1.5rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            padding: 1rem;
+            background: var(--cream);
+            transition: all 0.3s;
+        }
+
+        .feature-item:hover { background: var(--cream-dark); }
+
+        .feature-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--coral);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-item span {
+            font-size: 0.95rem;
+            color: var(--grijs);
+        }
+
+        /* Sidebar */
+        .room-sidebar { position: sticky; top: 100px; }
+
+        .sidebar-card {
+            background: var(--cream);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-card h4 {
+            font-size: 1.2rem;
+            color: var(--zwart);
+            margin-bottom: 1rem;
+        }
+
+        .sidebar-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-price .from {
+            font-size: 0.85rem;
+            color: var(--lichtgrijs);
+        }
+
+        .sidebar-price .amount {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--zwart);
+        }
+
+        .sidebar-price .unit {
+            font-size: 0.85rem;
+            color: var(--lichtgrijs);
+        }
+
+        .sidebar-includes {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .sidebar-includes li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            color: var(--grijs);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .sidebar-includes li:last-child { border-bottom: none; }
+
+        .sidebar-includes svg {
+            width: 16px;
+            height: 16px;
+            color: var(--coral);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            width: 100%;
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--coral);
+            color: var(--wit);
+            border-color: var(--coral);
+        }
+
+        .btn-primary:hover {
+            background: var(--coral-hover);
+            border-color: var(--coral-hover);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--zwart);
+            border-color: var(--zwart);
+        }
+
+        .btn-outline:hover {
+            background: var(--zwart);
+            color: var(--wit);
+        }
+
+        .btn svg { width: 16px; height: 16px; }
+
+        /* Contact Card */
+        .contact-card {
+            background: var(--zwart);
+            padding: 2rem;
+            color: var(--wit);
+        }
+
+        .contact-card h4 {
+            color: var(--wit);
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-card a {
+            color: var(--coral);
+            text-decoration: none;
+        }
+
+        .contact-card a:hover { text-decoration: underline; }
+
+        /* Ideal For Section */
+        .ideal-for {
+            padding: 5rem 0;
+            background: var(--cream);
+        }
+
+        .ideal-for-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .ideal-for-header h2 { color: var(--zwart); }
+
+        .ideal-for-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .ideal-for-card {
+            background: var(--wit);
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--cream-dark);
+            transition: all 0.3s;
+        }
+
+        .ideal-for-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .ideal-for-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: var(--coral);
+        }
+
+        .ideal-for-icon svg { width: 100%; height: 100%; }
+
+        .ideal-for-card h3 {
+            font-size: 1.2rem;
+            color: var(--zwart);
+            margin-bottom: 0.5rem;
+        }
+
+        .ideal-for-card p {
+            font-size: 0.85rem;
+            color: var(--lichtgrijs);
+        }
+
+        /* Other Rooms */
+        .other-rooms { padding: 5rem 0; }
+
+        .other-rooms-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .other-rooms-header h2 { color: var(--zwart); }
+
+        .other-rooms-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+
+        .other-room-card {
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: block;
+        }
+
+        .other-room-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.6s;
+        }
+
+        .other-room-card:hover img { transform: scale(1.05); }
+
+        .other-room-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(26,26,26,0.9) 0%, rgba(26,26,26,0.3) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .other-room-card h3 {
+            color: var(--wit);
+            font-size: 1.3rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .other-room-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.85rem;
+        }
+
+        /* CTA Section */
+        .room-cta {
+            padding: 5rem 0;
+            background: var(--coral);
+            text-align: center;
+        }
+
+        .room-cta h2 {
+            color: var(--wit);
+            margin-bottom: 1rem;
+        }
+
+        .room-cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .room-cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .btn-dark {
+            background: var(--zwart);
+            color: var(--wit);
+            border-color: var(--zwart);
+        }
+
+        .btn-dark:hover {
+            background: var(--donker);
+            border-color: var(--donker);
+        }
+
+        .btn-white {
+            background: var(--wit);
+            color: var(--zwart);
+            border-color: var(--wit);
+        }
+
+        .btn-white:hover {
+            background: var(--cream);
+            border-color: var(--cream);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--zwart);
+            padding: 4rem 0 2rem;
+            color: var(--wit);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: var(--lichtgrijs);
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            max-width: 300px;
+        }
+
+        .footer-logo { height: 50px; }
+
+        .footer h4 { font-size: 1rem; margin-bottom: 1.5rem; }
+
+        .footer ul { list-style: none; }
+
+        .footer li { margin-bottom: 0.75rem; }
+
+        .footer a {
+            color: var(--lichtgrijs);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer a:hover { color: var(--coral); }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-bottom p {
+            color: var(--lichtgrijs);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .room-hero-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .room-content-grid { grid-template-columns: 1fr; }
+            .room-sidebar { position: static; }
+            .features-grid { grid-template-columns: 1fr; }
+            .ideal-for-grid, .other-rooms-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .ideal-for-grid, .other-rooms-grid { grid-template-columns: 1fr; }
+            .room-cta-buttons { flex-direction: column; align-items: center; }
+            .room-cta-buttons .btn { width: 100%; max-width: 300px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <svg viewBox="0 0 1080 1080" height="45">
+                    <rect fill="#EE6350" width="1080" height="1080" rx="100"/>
+                    <g fill="#FFFFFF">
+                        <path d="M568.2,514.4c2.5,0.2,4.9,0.3,7.1,0.5v0c6.3-0.3,11.2-0.5,16.1-0.8c5.6-0.3,7.2-1.9,7.3-7.4c0.2-8.4,0.3-16.8,0.4-25.2c0.1-4,0.1-7.9,0.2-11.9c0.1-8,0.2-16,0.3-24l0.7-63.1c0.2-3.2-0.9-6.4-3-8.9c-2.1-2.3-4.5-4.5-7.1-6.4c-2.9-2-4.7-5.3-4.6-8.8c0.2-10,0.3-19.9,0.4-29.9l0,0c0-0.8,0.1-1.6,0.1-2.5c0.1-1.7,0.1-3.4,0.1-5.1c0-3.6,0-7.3-0.1-10.9c0-0.4-0.9-1.2-1.4-1.2c-5.3-0.2-10.7-0.2-16-0.2c-0.7,0.1-1.3,0.6-1.6,1.3c-0.4,3.1-0.7,6.1-0.8,9.2c0,1.6,0.1,3.1,0.2,4.7c0.1,1.5,0.2,2.9,0.2,4.4c0,3.3-0.1,6.7-0.1,10c-0.1,5.7-0.2,11.3-0.1,17c0.5,5.3-2.2,10.4-6.9,12.9c-5.4,3-8.7,8.6-8.7,14.8c-0.2,14.3-0.3,28.7-0.5,43.1c-0.2,14.5-0.3,29-0.5,43.5c0,2.7-0.1,5.4-0.1,8.1c-0.1,5.4-0.2,10.9-0.2,16.3c0,0.9,0,1.7,0,2.6c0,4.1-0.1,8.1,0.2,12.2c0.2,3.5,1.9,4.7,5.2,5C559.5,513.8,564,514.1,568.2,514.4z"/>
+                    </g>
+                </svg>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#events">Events</a></li>
+                <li><a href="../index.html#ruimtes">Ruimtes</a></li>
+                <li><a href="../index.html#kalender">Kalender</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta-group">
+                <a href="../index.html#brochure" class="nav-cta nav-cta-outline">Brochure</a>
+                <a href="../index.html#contact" class="nav-cta nav-cta-filled">Offerte</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Room Hero -->
+    <section class="room-hero">
+        <div class="room-hero-bg">
+            <img src="../images/CookaholicsFCDenBosch-245-lr.jpg" alt="Skybox">
+        </div>
+        <div class="container">
+            <div class="room-hero-content">
+                <div class="room-hero-grid">
+                    <div class="room-hero-text">
+                        <div class="label">Exclusief</div>
+                        <h1><em>Skybox</em></h1>
+                        <p class="room-hero-intro">Ultieme exclusiviteit voor kleine gezelschappen. Uw eigen privéloge met premium catering en ongestoord uitzicht op het veld.</p>
+                    </div>
+                    <div class="room-specs-card">
+                        <div class="room-specs-title">Specificaties</div>
+                        <div class="room-spec">
+                            <span class="room-spec-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                                Capaciteit
+                            </span>
+                            <span class="room-spec-value">10-20</span>
+                        </div>
+                        <div class="room-spec">
+                            <span class="room-spec-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
+                                Oppervlakte
+                            </span>
+                            <span class="room-spec-value">40 m²</span>
+                        </div>
+                        <div class="room-spec">
+                            <span class="room-spec-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                Privacy
+                            </span>
+                            <span class="room-spec-value">Volledig</span>
+                        </div>
+                        <div class="room-spec">
+                            <span class="room-spec-label">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+                                Velduitzicht
+                            </span>
+                            <span class="room-spec-value">Direct</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="../index.html">Home</a></li>
+                <li><span>/</span></li>
+                <li><a href="../index.html#ruimtes">Ruimtes</a></li>
+                <li><span>/</span></li>
+                <li>Skybox</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Room Content -->
+    <section class="room-content">
+        <div class="container">
+            <div class="room-content-grid">
+                <div class="room-description">
+                    <h2>Exclusiviteit voor <em>uw VIP's</em></h2>
+                    <p>De Skybox is de ultieme keuze voor exclusieve bijeenkomsten met uw belangrijkste relaties. Deze privéloge biedt volledige afzondering van de rest van het stadion, terwijl u geniet van een onbelemmerd uitzicht op het veld.</p>
+                    <p>Ideaal voor intieme relatie-events, directievergaderingen of om uw beste klanten te verwennen tijdens een thuiswedstrijd van FC Den Bosch. De sfeer is intiem maar luxueus, met persoonlijke bediening en premium catering.</p>
+                    <p>Tijdens wedstrijddagen heeft u vanaf uw comfortabele loge directe toegang tot uw eigen buitenbalkon waar u de wedstrijd kunt volgen in een unieke setting. Ook op niet-wedstrijddagen is de Skybox beschikbaar voor zakelijke bijeenkomsten.</p>
+
+                    <div class="room-features">
+                        <h3>Faciliteiten & Voorzieningen</h3>
+                        <div class="features-grid">
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Volledig privé en afgesloten</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Eigen buitenbalkon met stoelen</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Premium lounge meubilair</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Smart TV (presentaties/wedstrijd)</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Persoonlijke gastheer/gastvrouw</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Premium drankenpakket</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Airconditioning</span>
+                            </div>
+                            <div class="feature-item">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                <span>Snelle WiFi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="room-sidebar">
+                    <div class="sidebar-card">
+                        <h4>Vanaf prijs</h4>
+                        <div class="sidebar-price">
+                            <span class="from">Vanaf</span>
+                            <span class="amount">€95</span>
+                            <span class="unit">p.p.</span>
+                        </div>
+                        <ul class="sidebar-includes">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                Exclusief gebruik skybox
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                Premium catering
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                Persoonlijke bediening
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                VIP-parkeren
+                            </li>
+                        </ul>
+                        <a href="../index.html#contact" class="btn btn-primary">
+                            Offerte aanvragen
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="contact-card">
+                        <h4>Vragen?</h4>
+                        <p>Ons team staat klaar om u te helpen met het plannen van uw exclusieve event.</p>
+                        <p style="margin-bottom: 0.5rem;"><a href="tel:+31852736709">085 273 6709</a></p>
+                        <p><a href="mailto:events@cookaholics.nl">events@cookaholics.nl</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ideal For Section -->
+    <section class="ideal-for">
+        <div class="container">
+            <div class="ideal-for-header">
+                <div class="label">Perfect voor</div>
+                <h2>Ideaal voor deze <em>events</em></h2>
+            </div>
+            <div class="ideal-for-grid">
+                <div class="ideal-for-card">
+                    <div class="ideal-for-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3>VIP-klanten</h3>
+                    <p>Verwen uw beste relaties in luxe</p>
+                </div>
+                <div class="ideal-for-card">
+                    <div class="ideal-for-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <h3>Directievergaderingen</h3>
+                    <p>Beslissingen nemen in privacy</p>
+                </div>
+                <div class="ideal-for-card">
+                    <div class="ideal-for-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3>Wedstrijddagen</h3>
+                    <p>Exclusieve hospitality experience</p>
+                </div>
+                <div class="ideal-for-card">
+                    <div class="ideal-for-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/></svg>
+                    </div>
+                    <h3>Speciale gelegenheden</h3>
+                    <p>Jubilea, afscheid, mijlpalen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Rooms -->
+    <section class="other-rooms">
+        <div class="container">
+            <div class="other-rooms-header">
+                <div class="label">Meer ontdekken</div>
+                <h2>Andere <em>ruimtes</em></h2>
+            </div>
+            <div class="other-rooms-grid">
+                <a href="business-lounge.html" class="other-room-card">
+                    <img src="../images/CookaholicsFCDenBosch-204lr.jpg" alt="Business Lounge">
+                    <div class="other-room-overlay">
+                        <h3>Business Lounge</h3>
+                        <p>50-200 personen</p>
+                    </div>
+                </a>
+                <a href="boardroom.html" class="other-room-card">
+                    <img src="../images/CookaholicsFCDenBosch-115lr.jpg" alt="Boardroom">
+                    <div class="other-room-overlay">
+                        <h3>Boardroom</h3>
+                        <p>12-24 personen</p>
+                    </div>
+                </a>
+                <a href="terras.html" class="other-room-card">
+                    <img src="../images/CookaholicsFCDenBosch-244lr.jpg" alt="Terras">
+                    <div class="other-room-overlay">
+                        <h3>Terras aan het Veld</h3>
+                        <p>50-150 personen</p>
+                    </div>
+                </a>
+                <a href="perszaal.html" class="other-room-card">
+                    <img src="../images/CookaholicsFCDenBosch-408lr.jpg" alt="Perszaal">
+                    <div class="other-room-overlay">
+                        <h3>Perszaal</h3>
+                        <p>30-100 personen</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="room-cta">
+        <div class="container">
+            <h2>Interesse in de <em>Skybox</em>?</h2>
+            <p>Neem contact op voor een vrijblijvende offerte of plan een rondleiding.</p>
+            <div class="room-cta-buttons">
+                <a href="../index.html#contact" class="btn btn-dark">Offerte aanvragen</a>
+                <a href="tel:+31852736709" class="btn btn-white">Bel 085 273 6709</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <svg viewBox="0 0 1080 1080" height="50" class="footer-logo">
+                        <rect fill="#EE6350" width="1080" height="1080" rx="100"/>
+                        <g fill="#FFFFFF">
+                            <path d="M568.2,514.4c2.5,0.2,4.9,0.3,7.1,0.5v0c6.3-0.3,11.2-0.5,16.1-0.8c5.6-0.3,7.2-1.9,7.3-7.4c0.2-8.4,0.3-16.8,0.4-25.2c0.1-4,0.1-7.9,0.2-11.9c0.1-8,0.2-16,0.3-24l0.7-63.1c0.2-3.2-0.9-6.4-3-8.9c-2.1-2.3-4.5-4.5-7.1-6.4c-2.9-2-4.7-5.3-4.6-8.8c0.2-10,0.3-19.9,0.4-29.9l0,0c0-0.8,0.1-1.6,0.1-2.5c0.1-1.7,0.1-3.4,0.1-5.1c0-3.6,0-7.3-0.1-10.9c0-0.4-0.9-1.2-1.4-1.2c-5.3-0.2-10.7-0.2-16-0.2c-0.7,0.1-1.3,0.6-1.6,1.3c-0.4,3.1-0.7,6.1-0.8,9.2c0,1.6,0.1,3.1,0.2,4.7c0.1,1.5,0.2,2.9,0.2,4.4c0,3.3-0.1,6.7-0.1,10c-0.1,5.7-0.2,11.3-0.1,17c0.5,5.3-2.2,10.4-6.9,12.9c-5.4,3-8.7,8.6-8.7,14.8c-0.2,14.3-0.3,28.7-0.5,43.1c-0.2,14.5-0.3,29-0.5,43.5c0,2.7-0.1,5.4-0.1,8.1c-0.1,5.4-0.2,10.9-0.2,16.3c0,0.9,0,1.7,0,2.6c0,4.1-0.1,8.1,0.2,12.2c0.2,3.5,1.9,4.7,5.2,5C559.5,513.8,564,514.1,568.2,514.4z"/>
+                        </g>
+                    </svg>
+                    <p>Cookaholics is de officiële eventpartner van FC Den Bosch. Pure smaken, met aandacht gebracht.</p>
+                </div>
+                <div>
+                    <h4>Navigatie</h4>
+                    <ul>
+                        <li><a href="../index.html#events">Events</a></li>
+                        <li><a href="../index.html#ruimtes">Ruimtes</a></li>
+                        <li><a href="../index.html#kalender">Kalender</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Locatie</h4>
+                    <ul>
+                        <li><a href="#">Stadion De Vliert</a></li>
+                        <li><a href="#">Victorialaan 31</a></li>
+                        <li><a href="#">5213 JG 's-Hertogenbosch</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="tel:+31852736709">085 273 6709</a></li>
+                        <li><a href="mailto:events@cookaholics.nl">events@cookaholics.nl</a></li>
+                        <li><a href="https://cookaholics.nl">www.cookaholics.nl</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cookaholics x FC Den Bosch. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

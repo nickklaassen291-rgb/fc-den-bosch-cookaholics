@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomerborrel Organiseren Den Bosch | Stadion De Vliert</title>
+    <meta name="description" content="Organiseer een zomerborrel voor je team in Stadion De Vliert. Terras met velduitzicht, BBQ, walking dinner. Vanaf 30 personen. Volledig verzorgd door Cookaholics.">
+    <meta name="keywords" content="zomerborrel den bosch, personeelsborrel stadion, terras evenement den bosch, BBQ bedrijf, teamuitje den bosch">
+    <link rel="canonical" href="https://fcdenboschevents.nl/events/zomerborrel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "EventVenue",
+        "name": "FC Den Bosch Events — Zomerborrel",
+        "description": "Organiseer een zomerborrel voor je team in Stadion De Vliert",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Stadionlaan 1",
+            "addressLocality": "'s-Hertogenbosch",
+            "postalCode": "5215 GK",
+            "addressCountry": "NL"
+        },
+        "maximumAttendeeCapacity": 150,
+        "amenityFeature": [
+            {"@type": "LocationFeatureSpecification", "name": "Terras met velduitzicht"},
+            {"@type": "LocationFeatureSpecification", "name": "BBQ faciliteiten"},
+            {"@type": "LocationFeatureSpecification", "name": "Catering door Cookaholics"},
+            {"@type": "LocationFeatureSpecification", "name": "Gratis parkeren"}
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Wat kost een zomerborrel bij FC Den Bosch?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Afhankelijk van aantal gasten en arrangement. Borrel vanaf €35 p.p., met BBQ vanaf €65 p.p. Vraag een offerte op maat aan."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kan ik het terras exclusief afnemen?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Het terras is exclusief beschikbaar voor jouw groep. Geen andere gasten."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is er entertainment mogelijk?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Van DJ tot live muziek, van een quiz tot een stadionrondleiding. We denken mee."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hoe ver van tevoren moet ik boeken?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In de zomermaanden is het terras populair. Boek minimaal 4-6 weken vooruit voor de beste beschikbaarheid."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --zwart: #232323;
+            --donker: #2D2D2D;
+            --grijs: #232323;
+            --lichtgrijs: #666666;
+            --cream: #F9ECDE;
+            --cream-dark: #F0E2D0;
+            --wit: #FFFFFF;
+            --lichtbeige: #F9ECDE;
+            --coral: #EE6350;
+            --coral-hover: #ff7a68;
+            --goud: #C9A96E;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;
+            color: var(--grijs);
+            background: var(--lichtbeige);
+            line-height: 1.6;
+            letter-spacing: -0.01em;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); }
+        h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+
+        em { font-style: italic; color: var(--coral); }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--coral);
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--zwart);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            height: 90px;
+            width: auto;
+            margin: -20px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--wit);
+            text-decoration: none;
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 0.75rem 1.25rem;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover { color: var(--coral); }
+
+        .nav-cta-group { display: flex; gap: 0.5rem; }
+
+        .nav-cta {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .nav-cta-outline {
+            color: var(--wit);
+            border: 1px solid rgba(255,255,255,0.4);
+        }
+
+        .nav-cta-outline:hover {
+            background: var(--lichtbeige);
+            color: var(--zwart);
+        }
+
+        .nav-cta-filled {
+            background: var(--coral);
+            color: var(--wit);
+        }
+
+        .nav-cta-filled:hover { background: var(--coral-hover); }
+
+        /* Hero */
+        .hero {
+            min-height: 70vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 140px 0 80px;
+            background: var(--zwart);
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right,
+                rgba(26,26,26,0.9) 0%,
+                rgba(26,26,26,0.7) 50%,
+                rgba(26,26,26,0.5) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero .label { margin-bottom: 1rem; }
+
+        .hero h1 {
+            color: var(--wit);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 em { color: var(--coral); }
+
+        .hero-intro {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1rem 2rem;
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary { background: var(--coral); color: var(--wit); border-color: var(--coral); }
+        .btn-primary:hover { background: var(--coral-hover); border-color: var(--coral-hover); }
+        .btn-outline-light { background: transparent; color: var(--wit); border-color: rgba(255,255,255,0.5); }
+        .btn-outline-light:hover { background: var(--lichtbeige); color: var(--zwart); border-color: var(--wit); }
+        .btn-outline-dark { background: transparent; color: var(--zwart); border-color: var(--zwart); }
+        .btn-outline-dark:hover { background: var(--zwart); color: var(--wit); }
+        .btn-white { background: var(--wit); color: var(--coral); border-color: var(--wit); }
+        .btn-white:hover { background: transparent; color: var(--wit); }
+        .btn-outline-white { background: transparent; color: var(--wit); border-color: var(--wit); }
+        .btn-outline-white:hover { background: var(--wit); color: var(--coral); }
+
+        .btn svg { width: 16px; height: 16px; }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            padding: 1rem 0;
+            background: var(--cream);
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            gap: 0.5rem;
+            list-style: none;
+            font-size: 0.85rem;
+        }
+
+        .breadcrumb-list a { color: var(--lichtgrijs); text-decoration: none; }
+        .breadcrumb-list a:hover { color: var(--coral); }
+        .breadcrumb-list span { color: var(--lichtgrijs); }
+        .breadcrumb-list li:last-child { color: var(--zwart); }
+
+        /* Intro */
+        .intro {
+            padding: 5rem 0;
+            background: var(--lichtbeige);
+        }
+
+        .intro-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .intro-content h2 {
+            margin-bottom: 1.5rem;
+            color: var(--zwart);
+        }
+
+        .intro-content p {
+            font-size: 1.05rem;
+            color: var(--grijs);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        /* Services / Arrangementen */
+        .services {
+            padding: 5rem 0;
+            background: var(--cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header .label { margin-bottom: 1rem; }
+        .section-header h2 { color: var(--zwart); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--wit);
+            padding: 2rem;
+            border: 1px solid var(--cream-dark);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .service-card h3 {
+            color: var(--zwart);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card p {
+            color: var(--lichtgrijs);
+            line-height: 1.7;
+        }
+
+        /* USP */
+        .usp {
+            padding: 5rem 0;
+            background: var(--zwart);
+        }
+
+        .usp .section-header h2 { color: var(--wit); }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .usp-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .usp-check {
+            color: var(--coral);
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+        }
+
+        .usp-item strong {
+            color: var(--wit);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .usp-item p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Culinair */
+        .culinair {
+            padding: 5rem 0;
+            background: var(--lichtbeige);
+        }
+
+        .culinair-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .culinair-text .label { margin-bottom: 1rem; }
+
+        .culinair-text h2 {
+            color: var(--zwart);
+            margin-bottom: 1rem;
+        }
+
+        .culinair-text p {
+            color: var(--grijs);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .culinair-list { list-style: none; }
+
+        .culinair-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--cream-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--grijs);
+        }
+
+        .culinair-list li::before {
+            content: "•";
+            color: var(--coral);
+            font-size: 1.2rem;
+        }
+
+        .culinair-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Praktisch */
+        .praktisch {
+            padding: 5rem 0;
+            background: var(--cream);
+        }
+
+        .praktisch-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .praktisch-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--wit);
+            border: 1px solid var(--cream-dark);
+        }
+
+        .praktisch-item .icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            color: var(--coral);
+        }
+
+        .praktisch-item .icon svg { width: 100%; height: 100%; }
+
+        .praktisch-item strong {
+            display: block;
+            color: var(--zwart);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .praktisch-item span {
+            color: var(--lichtgrijs);
+            font-size: 0.9rem;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 5rem 0;
+            background: var(--lichtbeige);
+        }
+
+        .faq-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--cream-dark);
+            margin-bottom: 1rem;
+            background: var(--wit);
+        }
+
+        .faq-question {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--zwart);
+            padding: 1.25rem 1.5rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .faq-question:hover { color: var(--coral); }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--coral);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            color: var(--lichtgrijs);
+            line-height: 1.7;
+            padding: 0 1.5rem 1.5rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer { display: block; }
+
+        /* CTA */
+        .cta {
+            padding: 5rem 0;
+            background: var(--coral);
+            text-align: center;
+        }
+
+        .cta h2 { color: var(--wit); margin-bottom: 1rem; }
+
+        .cta p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Related */
+        .related {
+            padding: 4rem 0;
+            background: var(--cream);
+        }
+
+        .related h3 {
+            text-align: center;
+            color: var(--zwart);
+            margin-bottom: 2rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .related-link {
+            display: block;
+            padding: 1.5rem;
+            background: var(--wit);
+            border: 1px solid var(--cream-dark);
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .related-link:hover {
+            border-color: var(--coral);
+            transform: translateY(-3px);
+        }
+
+        .related-link span {
+            color: var(--zwart);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--zwart);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo img { height: 60px; width: auto; }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--coral); }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid,
+            .usp-grid { grid-template-columns: repeat(2, 1fr); }
+            .praktisch-grid { grid-template-columns: repeat(2, 1fr); }
+            .culinair-content { grid-template-columns: 1fr; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .services-grid,
+            .usp-grid,
+            .praktisch-grid,
+            .related-grid { grid-template-columns: 1fr; }
+            .hero-buttons,
+            .cta-buttons { flex-direction: column; align-items: stretch; }
+            .footer-content { flex-direction: column; gap: 1.5rem; text-align: center; }
+            .footer-links { flex-wrap: wrap; justify-content: center; }
+            .footer-bottom { flex-direction: column; gap: 0.5rem; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/Cookaholics-logo-transparant.svg" alt="Cookaholics" class="nav-logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#ruimtes">Ruimtes</a></li>
+                <li><a href="../index.html#events">Evenementen</a></li>
+                <li><a href="../index.html#kalender">Kalender</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta-group">
+                <a href="../index.html#contact" class="nav-cta nav-cta-outline">Rondleiding</a>
+                <a href="../index.html#contact" class="nav-cta nav-cta-filled">Offerte</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="../images/CookaholicsFCDenBosch-115lr.jpg" alt="Zomerborrel op het terras van Stadion De Vliert">
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <span class="label">Voor je eigen team</span>
+                <h1>Zomerborrel in <em>De Vliert</em></h1>
+                <p class="hero-intro">Terras, velduitzicht, BBQ. Jouw team, jouw avond. Volledig verzorgd door Cookaholics.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        Vraag offerte aan
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                    <a href="#mogelijkheden" class="btn btn-outline-light">Bekijk mogelijkheden</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb-list">
+                <li><a href="../index.html">Home</a> <span>/</span></li>
+                <li><a href="../index.html#events">Evenementen</a> <span>/</span></li>
+                <li>Zomerborrel</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro-content">
+                <h2>Meer dan een <em>borrel</em></h2>
+                <p>Een zomerborrel in het stadion is geen standaard bedrijfsuitje. Terras met uitzicht op het veld. Ondergaande zon. Je team dat geniet.</p>
+                <p>Cookaholics verzorgt alles. Concept, keuken, service. Jullie hoeven alleen te komen.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arrangementen -->
+    <section class="services" id="mogelijkheden">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Mogelijkheden</span>
+                <h2>Kies je <em>arrangement</em></h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Borrel op het terras</h3>
+                    <p>Hapjes, drankjes, velduitzicht. 3 uur onbezorgd genieten.</p>
+                </div>
+                <div class="service-card">
+                    <h3>BBQ aan het veld</h3>
+                    <p>Live grillen op het stadionterras. Vlees, vis, vega.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Walking dinner</h3>
+                    <p>Doorlopend serveren. Gasten die bewegen, praten, proeven.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Festival-style</h3>
+                    <p>Foodtrucks, live cooking, cocktailbar. Groot uitpakken.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- USP -->
+    <section class="usp">
+        <div class="container">
+            <div class="section-header">
+                <h2>Waarom <em>De Vliert</em></h2>
+            </div>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Unieke locatie</strong>
+                        <p>Geen standaard zaal. Een stadion.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Eigen terras</strong>
+                        <p>Direct aan het veld. Tot 150 personen.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Eén aanspreekpunt</strong>
+                        <p>Concept tot uitvoering. Eén team.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Flexibel</strong>
+                        <p>30 tot 150 gasten. Elke opstelling mogelijk.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Bereikbaar</strong>
+                        <p>Centrum Den Bosch. 500+ parkeerplaatsen.</p>
+                    </div>
+                </div>
+                <div class="usp-item">
+                    <svg class="usp-check" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                    <div>
+                        <strong>Bewezen kwaliteit</strong>
+                        <p>Cookaholics. Vertrouwd door Efteling en Van Mossel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culinair -->
+    <section class="culinair">
+        <div class="container">
+            <div class="culinair-content">
+                <div class="culinair-text">
+                    <span class="label">Catering</span>
+                    <h2>Culinaire <em>regie</em></h2>
+                    <p>Cookaholics is geen standaard cateraar. Wij bedenken, bereiden en serveren. Seizoensgebonden menu's, lokale producten, presentatie tot in detail.</p>
+                    <ul class="culinair-list">
+                        <li>Walking dinner met seizoensmenu</li>
+                        <li>BBQ met vlees, vis en vega opties</li>
+                        <li>Live cooking stations</li>
+                        <li>Borrel met luxe hapjes</li>
+                        <li>Foodtrucks en cocktailbar</li>
+                    </ul>
+                    <a href="../index.html#contact" class="btn btn-outline-dark" style="margin-top: 1.5rem;">Vraag een arrangement aan</a>
+                </div>
+                <div class="culinair-image">
+                    <img src="../images/CookaholicsFCDenBosch-408lr.jpg" alt="Culinaire catering door Cookaholics">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Praktisch -->
+    <section class="praktisch">
+        <div class="container">
+            <div class="section-header">
+                <h2>Praktische <em>info</em></h2>
+            </div>
+            <div class="praktisch-grid">
+                <div class="praktisch-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <strong>Capaciteit</strong>
+                    <span>30-150 gasten</span>
+                </div>
+                <div class="praktisch-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    </div>
+                    <strong>Beschikbaar</strong>
+                    <span>April t/m september</span>
+                </div>
+                <div class="praktisch-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <strong>Parkeren</strong>
+                    <span>500+ gratis plaatsen</span>
+                </div>
+                <div class="praktisch-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <strong>Locatie</strong>
+                    <span>Stadionlaan 1, Den Bosch</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Veelgestelde <em>vragen</em></h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Wat kost een zomerborrel bij FC Den Bosch?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <div class="faq-answer">Afhankelijk van aantal gasten en arrangement. Borrel vanaf €35 p.p., met BBQ vanaf €65 p.p. Vraag een offerte op maat aan.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Kan ik het terras exclusief afnemen?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <div class="faq-answer">Ja. Het terras is exclusief beschikbaar voor jouw groep. Geen andere gasten.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Is er entertainment mogelijk?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <div class="faq-answer">Van DJ tot live muziek, van een quiz tot een stadionrondleiding. We denken mee.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Hoe ver van tevoren moet ik boeken?
+                        <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+                    </div>
+                    <div class="faq-answer">In de zomermaanden is het terras populair. Boek minimaal 4-6 weken vooruit voor de beste beschikbaarheid.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <h2>Klaar om te plannen?</h2>
+            <p>Neem contact op. We denken mee over concept, catering en invulling.</p>
+            <div class="cta-buttons">
+                <a href="../index.html#contact" class="btn btn-white">Vraag offerte aan</a>
+                <a href="tel:+31730000000" class="btn btn-outline-white">Bel direct: 073-XXX XXXX</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related -->
+    <section class="related">
+        <div class="container">
+            <h3>Bekijk ook</h3>
+            <div class="related-grid">
+                <a href="personeelsfeest.html" class="related-link"><span>Personeelsfeest</span></a>
+                <a href="relatie-evenement.html" class="related-link"><span>Relatie-evenement</span></a>
+                <a href="culinaire-arrangementen.html" class="related-link"><span>Culinaire arrangementen</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../images/Cookaholics-logo-transparant.svg" alt="Cookaholics">
+                </div>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../index.html#ruimtes">Ruimtes</a></li>
+                    <li><a href="../index.html#events">Evenementen</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Cookaholics &times; FC Den Bosch</span>
+                <span>Stadionlaan 1, 's-Hertogenbosch</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
