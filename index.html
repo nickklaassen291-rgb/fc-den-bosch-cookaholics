@@ -1630,6 +1630,104 @@
                 text-align: center;
             }
         }
+
+        /* Ruimtes Grid Cards */
+        .ruimtes-cards {
+            padding: 0 0 6rem;
+            background: var(--cream);
+        }
+
+        .ruimtes-cards .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .ruimtes-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .ruimte-grid-card {
+            background: var(--zwart);
+            overflow: hidden;
+        }
+
+        .ruimte-grid-card-image {
+            position: relative;
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+
+        .ruimte-grid-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+        }
+
+        .ruimte-grid-card-image img.active {
+            opacity: 1;
+        }
+
+        .ruimte-grid-card-body {
+            padding: 1.5rem 1.8rem 1.8rem;
+        }
+
+        .ruimte-grid-card-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #fff;
+            margin-bottom: 1.2rem;
+        }
+
+        .ruimte-grid-card-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0.6rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .ruimte-grid-card-label {
+            font-family: 'Campton', sans-serif;
+            font-weight: 400;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .ruimte-grid-card-value {
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.85);
+            text-align: right;
+        }
+
+        @media (max-width: 1024px) {
+            .ruimtes-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .ruimtes-cards-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .ruimte-grid-card-body {
+                padding: 1.2rem 1.4rem 1.4rem;
+            }
+
+            .ruimte-grid-card-body h3 {
+                font-size: 1.2rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2020,10 +2118,10 @@
                     </div>
                 </div>
 
-                <!-- 6. The Lodge 1965 -->
+                <!-- 6. The Loge 1965 -->
                 <div class="accordion-item" data-open="false">
                     <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-lodge">
-                        <span class="accordion-trigger-name">The Lodge 1965</span>
+                        <span class="accordion-trigger-name">The Loge 1965</span>
                         <span class="accordion-trigger-cap">50 personen</span>
                         <span class="accordion-trigger-area">40 m²</span>
                         <svg class="accordion-chevron" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
@@ -2031,12 +2129,12 @@
                     <div class="accordion-panel" id="panel-lodge" role="region">
                         <div class="accordion-panel-inner">
                             <div class="accordion-panel-text">
-                                <p>Verscholen in de hoek van het stadion met uniek zicht over het veld. The Lodge 1965 is sfeervol, intiem en exclusief — alsof je een privéloge betreedt.</p>
+                                <p>Verscholen in de hoek van het stadion met uniek zicht over het veld. The Loge 1965 is sfeervol, intiem en exclusief — alsof je een privéloge betreedt.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner</p>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
-                                <img src="images/lodge1965-1.jpg" alt="The Lodge 1965" class="active">
-                                <img src="images/lodge1965-2.jpg" alt="The Lodge 1965">
+                                <img src="images/lodge1965-1.jpg" alt="The Loge 1965" class="active">
+                                <img src="images/lodge1965-2.jpg" alt="The Loge 1965">
                             </div>
                         </div>
                     </div>
@@ -2108,6 +2206,213 @@
             </div>
             <div style="text-align: center; margin-top: 3rem;">
                 <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-outline-dark">Niet zeker welke ruimte? Wij adviseren je</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ruimtes Grid (alternatief ontwerp) -->
+    <section class="ruimtes-cards">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Alternatief ontwerp</div>
+                <h2>Onze ruimtes als <em>grid</em></h2>
+            </div>
+            <div class="ruimtes-cards-grid">
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image" data-slideshow>
+                        <img src="images/businesslounge-1.jpg" alt="Businesslounge" class="active">
+                        <img src="images/businesslounge-2.jpg" alt="Businesslounge">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Businesslounge</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">500 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">400 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image" data-slideshow>
+                        <img src="images/supportershome-1.jpg" alt="Supportershome" class="active">
+                        <img src="images/supportershome-2.jpg" alt="Supportershome">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Supportershome</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">500 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">400 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">Begane grond</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/janschouten-1.jpg" alt="Jan Schouten Lounge" class="active">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Jan Schouten Lounge</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">150 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">100 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image" data-slideshow>
+                        <img src="images/victorialane-1.jpg" alt="Victoria Lane" class="active">
+                        <img src="images/victorialane-2.jpg" alt="Victoria Lane">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Victoria Lane</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">50 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">40 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image" data-slideshow>
+                        <img src="images/denbox-1.jpg" alt="Den Box" class="active">
+                        <img src="images/denbox-2.jpg" alt="Den Box">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Den Box</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">50 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">40 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image" data-slideshow>
+                        <img src="images/lodge1965-1.jpg" alt="The Loge 1965" class="active">
+                        <img src="images/lodge1965-2.jpg" alt="The Loge 1965">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>The Loge 1965</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">50 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">40 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/hoofdtribune-1.jpg" alt="Hoofdtribune" class="active">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Hoofdtribune</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">1000 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">500 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">2e</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/desliert-1.jpg" alt="Café de Sliert" class="active">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Café de Sliert</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">100 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">125 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">Begane grond</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/voetbalcafe-1.jpg" alt="Voetbalcafé" class="active">
+                    </div>
+                    <div class="ruimte-grid-card-body">
+                        <h3>Voetbalcafé</h3>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Capaciteit</span>
+                            <span class="ruimte-grid-card-value">150 personen</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Oppervlakte</span>
+                            <span class="ruimte-grid-card-value">180 m²</span>
+                        </div>
+                        <div class="ruimte-grid-card-row">
+                            <span class="ruimte-grid-card-label">Etage</span>
+                            <span class="ruimte-grid-card-value">1e</span>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -2308,7 +2613,7 @@
         });
 
         // Image slideshow for rooms with multiple photos
-        document.querySelectorAll('.accordion-panel-image[data-slideshow]').forEach(container => {
+        document.querySelectorAll('[data-slideshow]').forEach(container => {
             const imgs = container.querySelectorAll('img');
             if (imgs.length < 2) return;
             let current = 0;
