@@ -1637,6 +1637,16 @@
             background: var(--cream);
         }
 
+        a.ruimte-grid-card {
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s;
+        }
+
+        a.ruimte-grid-card:hover {
+            transform: translateY(-4px);
+        }
+
         .ruimtes-cards .section-header {
             margin-bottom: 3rem;
         }
@@ -1685,6 +1695,24 @@
             margin-bottom: 1.2rem;
         }
 
+        .ruimte-grid-card-desc {
+            font-family: 'Campton', sans-serif;
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .ruimte-grid-card-events {
+            font-family: 'Campton', sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: var(--coral);
+            margin-bottom: 1.2rem;
+            line-height: 1.5;
+        }
+
         .ruimte-grid-card-row {
             display: flex;
             justify-content: space-between;
@@ -1708,13 +1736,21 @@
             text-align: right;
         }
 
+        /* Desktop: show grid, hide accordion */
+        .ruimtes .ruimtes-accordion { display: none; }
+        .ruimtes-cards { display: block; }
+
         @media (max-width: 1024px) {
             .ruimtes-cards-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
         }
 
+        /* Mobile: show accordion, hide grid */
         @media (max-width: 768px) {
+            .ruimtes .ruimtes-accordion { display: block; }
+            .ruimtes-cards { display: none; }
+
             .ruimtes-cards-grid {
                 grid-template-columns: 1fr;
                 gap: 1rem;
@@ -1822,7 +1858,7 @@
                     </div>
                     <h3>Personeelsfeest</h3>
                     <p>Bedrijfsfeest, kerstborrel, zomerfeest, jubileum</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/personeelsfeest.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1833,7 +1869,7 @@
                     </div>
                     <h3>Relatie-evenement</h3>
                     <p>Klantendag, relatieborrel, open dag, productlancering</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/relatie-evenement.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1844,7 +1880,7 @@
                     </div>
                     <h3>Vergadering & meetings</h3>
                     <p>Vergaderlocatie, brainstorm, boardroom</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/vergadering.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1855,7 +1891,7 @@
                     </div>
                     <h3>Kick-off & congressen</h3>
                     <p>Kick-off, seminar, congres, presentatie</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/kick-off.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1866,7 +1902,7 @@
                     </div>
                     <h3>Teambuilding</h3>
                     <p>Teambuilding, bedrijfsuitje, teamdag</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/teambuilding.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1877,7 +1913,7 @@
                     </div>
                     <h3>Culinaire arrangementen</h3>
                     <p>BBQ, walking dinner, sit-down, foodcourts, lunch</p>
-                    <a href="#contact" class="event-type-link">
+                    <a href="events/culinaire-arrangementen.html" class="event-type-link">
                         Meer info
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
                     </a>
@@ -1897,11 +1933,11 @@
                 <div class="event-detail-content">
                     <div class="label">Meest gevraagd</div>
                     <h2>Personeelsfeest</h2>
-                    <p>Bedrijfsfeest, kerstborrel, zomerfeest of jubileum. In een stadion viert je team het anders. DJ-booth, eigen bar, 7 schermen — geen standaard zaal, maar een locatie met karakter.</p>
+                    <p>Kerstborrel, zomerfeest, jubileum of bedrijfsuitje. In een stadion viert je team het anders. DJ-booth, eigen bar, 7 schermen. Geen standaard zaal, maar een locatie met karakter.</p>
                     <div class="event-detail-features">
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>20-120 personen</span>
+                            <span>20 tot 500+ personen</span>
                         </div>
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -1953,15 +1989,15 @@
                 <div class="event-detail-content">
                     <div class="label">Versterk je netwerk</div>
                     <h2>Relatie-evenement</h2>
-                    <p>Klantendag, relatieborrel, open dag of productlancering. Maak indruk op je belangrijkste relaties in een setting die niemand vergeet.</p>
+                    <p>Klantendag, relatieborrel, open dag of productlancering. Ontvang je relaties op een locatie die indruk maakt, zonder dat je zelf iets hoeft te regelen.</p>
                     <div class="event-detail-features">
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>50-300 personen</span>
+                            <span>20 tot 500+ personen</span>
                         </div>
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>3-gangen diner of walking dinner</span>
+                            <span>Walking dinner of sit-down diner</span>
                         </div>
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
@@ -1969,7 +2005,7 @@
                         </div>
                         <div class="event-detail-feature">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            <span>Veldbezoek optioneel</span>
+                            <span>Volledig verzorgd door Cookaholics</span>
                         </div>
                     </div>
                     <div class="event-detail-pricing">
@@ -2022,6 +2058,7 @@
                             <div class="accordion-panel-text">
                                 <p>Twee bars, meerdere zones en uitzicht over het veld. De Businesslounge biedt 400 m² aan mogelijkheden — van intieme subruimtes tot een volledige zaalopstelling.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering</p>
+                                <a href="ruimtes/business-lounge.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
                                 <img src="images/businesslounge-1.jpg" alt="Businesslounge" class="active">
@@ -2044,6 +2081,7 @@
                             <div class="accordion-panel-text">
                                 <p>Volledig vernieuwd en doordrenkt van clubkleuren. Het Supportershome op de begane grond is de grootste ruimte van het stadion — ideaal voor events waar ruimte en sfeer samenkomen.</p>
                                 <p class="accordion-events">BBQ · Foodtruck · Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering · Presentatie</p>
+                                <a href="ruimtes/supportershome.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
                                 <img src="images/supportershome-1.jpg" alt="Supportershome" class="active">
@@ -2066,6 +2104,7 @@
                             <div class="accordion-panel-text">
                                 <p>Ontworpen door Mister Design als eerbetoon aan clubicoon Jan Schouten. Een lounge met karakter, waar historie en stijl samenkomen in een uitnodigende setting.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner · Congres · Vergadering</p>
+                                <a href="ruimtes/jan-schouten-lounge.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image">
                                 <img src="images/janschouten-1.jpg" alt="Jan Schouten Lounge" class="active">
@@ -2087,6 +2126,7 @@
                             <div class="accordion-panel-text">
                                 <p>Strak, modern en lichtrijk. Victoria Lane biedt uitzicht op het veld vanuit een eigentijds ingerichte ruimte — perfect voor wie sfeer én stijl zoekt.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner</p>
+                                <a href="ruimtes/victoria-lane.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
                                 <img src="images/victorialane-1.jpg" alt="Victoria Lane" class="active">
@@ -2109,6 +2149,7 @@
                             <div class="accordion-panel-text">
                                 <p>De warmte van een bruincafé, het uitzicht van een skybox. Den Box combineert authentieke sfeer met panoramisch zicht op het veld — een ruimte met karakter.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                                <a href="ruimtes/den-box.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
                                 <img src="images/denbox-1.jpg" alt="Den Box" class="active">
@@ -2131,6 +2172,7 @@
                             <div class="accordion-panel-text">
                                 <p>Verscholen in de hoek van het stadion met uniek zicht over het veld. The Loge 1965 is sfeervol, intiem en exclusief — alsof je een privéloge betreedt.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner · Sit-down diner</p>
+                                <a href="ruimtes/loge-1965.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image" data-slideshow>
                                 <img src="images/lodge1965-1.jpg" alt="The Loge 1965" class="active">
@@ -2153,6 +2195,7 @@
                             <div class="accordion-panel-text">
                                 <p>De energie van het stadion, ongeëvenaard. De hoofdtribune biedt ruimte voor grote groepen met direct zicht op het veld — inspireert en motiveert als geen andere locatie.</p>
                                 <p class="accordion-events">Presentatie</p>
+                                <a href="ruimtes/hoofdtribune.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image">
                                 <img src="images/hoofdtribune-1.jpg" alt="Hoofdtribune" class="active">
@@ -2174,6 +2217,7 @@
                             <div class="accordion-panel-text">
                                 <p>Ronde bar, warme sfeer, snel vol leven. Café de Sliert op de begane grond is de informele kantine van het stadion — ideaal voor privéfeesten waar het direct klikt.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                                <a href="ruimtes/cafe-de-sliert.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image">
                                 <img src="images/desliert-1.jpg" alt="Café de Sliert" class="active">
@@ -2195,6 +2239,7 @@
                             <div class="accordion-panel-text">
                                 <p>Waar spelers na de wedstrijd samenkomen met familie en vrienden. Het Voetbalcafé op de eerste etage ademt sport en verbinding — een authentieke plek voor borrels met verhaal.</p>
                                 <p class="accordion-events">Borrel · Feestavond · Walking dinner</p>
+                                <a href="ruimtes/voetbalcafe.html" style="display:inline-flex;align-items:center;gap:0.4rem;margin-top:1rem;font-family:'Campton',sans-serif;font-size:0.75rem;font-weight:400;letter-spacing:0.15em;text-transform:uppercase;color:var(--coral);text-decoration:none;transition:color 0.3s;"><span>Bekijk ruimte</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="14" height="14"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></a>
                             </div>
                             <div class="accordion-panel-image">
                                 <img src="images/voetbalcafe-1.jpg" alt="Voetbalcafé" class="active">
@@ -2210,22 +2255,17 @@
         </div>
     </section>
 
-    <!-- Ruimtes Grid (alternatief ontwerp) -->
-    <section class="ruimtes-cards">
+    <!-- Ruimtes Grid (desktop) -->
+    <section class="ruimtes-cards" id="ruimtes-grid">
         <div class="container">
-            <div class="section-header">
-                <div class="label">Alternatief ontwerp</div>
-                <h2>Onze ruimtes als <em>grid</em></h2>
-            </div>
             <div class="ruimtes-cards-grid">
 
-                <div class="ruimte-grid-card">
-                    <div class="ruimte-grid-card-image" data-slideshow>
-                        <img src="images/businesslounge-1.jpg" alt="Businesslounge" class="active">
-                        <img src="images/businesslounge-2.jpg" alt="Businesslounge">
+                <a href="ruimtes/business-lounge.html" class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/businesslounge-1.jpg" alt="Business Lounge" class="active">
                     </div>
                     <div class="ruimte-grid-card-body">
-                        <h3>Businesslounge</h3>
+                        <h3>Business Lounge</h3>
                         <div class="ruimte-grid-card-row">
                             <span class="ruimte-grid-card-label">Capaciteit</span>
                             <span class="ruimte-grid-card-value">500 personen</span>
@@ -2239,12 +2279,11 @@
                             <span class="ruimte-grid-card-value">2e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
-                    <div class="ruimte-grid-card-image" data-slideshow>
+                <a href="ruimtes/supportershome.html" class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
                         <img src="images/supportershome-1.jpg" alt="Supportershome" class="active">
-                        <img src="images/supportershome-2.jpg" alt="Supportershome">
                     </div>
                     <div class="ruimte-grid-card-body">
                         <h3>Supportershome</h3>
@@ -2261,9 +2300,9 @@
                             <span class="ruimte-grid-card-value">Begane grond</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
+                <a href="ruimtes/jan-schouten-lounge.html" class="ruimte-grid-card">
                     <div class="ruimte-grid-card-image">
                         <img src="images/janschouten-1.jpg" alt="Jan Schouten Lounge" class="active">
                     </div>
@@ -2282,12 +2321,11 @@
                             <span class="ruimte-grid-card-value">2e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
-                    <div class="ruimte-grid-card-image" data-slideshow>
+                <a href="ruimtes/victoria-lane.html" class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
                         <img src="images/victorialane-1.jpg" alt="Victoria Lane" class="active">
-                        <img src="images/victorialane-2.jpg" alt="Victoria Lane">
                     </div>
                     <div class="ruimte-grid-card-body">
                         <h3>Victoria Lane</h3>
@@ -2304,12 +2342,11 @@
                             <span class="ruimte-grid-card-value">2e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
-                    <div class="ruimte-grid-card-image" data-slideshow>
+                <a href="ruimtes/den-box.html" class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
                         <img src="images/denbox-1.jpg" alt="Den Box" class="active">
-                        <img src="images/denbox-2.jpg" alt="Den Box">
                     </div>
                     <div class="ruimte-grid-card-body">
                         <h3>Den Box</h3>
@@ -2326,15 +2363,14 @@
                             <span class="ruimte-grid-card-value">2e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
-                    <div class="ruimte-grid-card-image" data-slideshow>
-                        <img src="images/lodge1965-1.jpg" alt="The Loge 1965" class="active">
-                        <img src="images/lodge1965-2.jpg" alt="The Loge 1965">
+                <a href="ruimtes/loge-1965.html" class="ruimte-grid-card">
+                    <div class="ruimte-grid-card-image">
+                        <img src="images/lodge1965-1.jpg" alt="Loge 1965" class="active">
                     </div>
                     <div class="ruimte-grid-card-body">
-                        <h3>The Loge 1965</h3>
+                        <h3>Loge 1965</h3>
                         <div class="ruimte-grid-card-row">
                             <span class="ruimte-grid-card-label">Capaciteit</span>
                             <span class="ruimte-grid-card-value">50 personen</span>
@@ -2348,9 +2384,9 @@
                             <span class="ruimte-grid-card-value">2e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
+                <a href="ruimtes/hoofdtribune.html" class="ruimte-grid-card">
                     <div class="ruimte-grid-card-image">
                         <img src="images/hoofdtribune-1.jpg" alt="Hoofdtribune" class="active">
                     </div>
@@ -2358,7 +2394,7 @@
                         <h3>Hoofdtribune</h3>
                         <div class="ruimte-grid-card-row">
                             <span class="ruimte-grid-card-label">Capaciteit</span>
-                            <span class="ruimte-grid-card-value">1000 personen</span>
+                            <span class="ruimte-grid-card-value">1000+ personen</span>
                         </div>
                         <div class="ruimte-grid-card-row">
                             <span class="ruimte-grid-card-label">Oppervlakte</span>
@@ -2366,12 +2402,12 @@
                         </div>
                         <div class="ruimte-grid-card-row">
                             <span class="ruimte-grid-card-label">Etage</span>
-                            <span class="ruimte-grid-card-value">2e</span>
+                            <span class="ruimte-grid-card-value">Tribuneniveau</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
+                <a href="ruimtes/cafe-de-sliert.html" class="ruimte-grid-card">
                     <div class="ruimte-grid-card-image">
                         <img src="images/desliert-1.jpg" alt="Café de Sliert" class="active">
                     </div>
@@ -2390,9 +2426,9 @@
                             <span class="ruimte-grid-card-value">Begane grond</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <div class="ruimte-grid-card">
+                <a href="ruimtes/voetbalcafe.html" class="ruimte-grid-card">
                     <div class="ruimte-grid-card-image">
                         <img src="images/voetbalcafe-1.jpg" alt="Voetbalcafé" class="active">
                     </div>
@@ -2411,8 +2447,11 @@
                             <span class="ruimte-grid-card-value">1e</span>
                         </div>
                     </div>
-                </div>
+                </a>
 
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="mailto:info@cookaholics.nl?subject=Plan%20een%20afspraak" class="btn btn-outline-dark">Niet zeker welke ruimte? Wij adviseren je</a>
             </div>
         </div>
     </section>
@@ -2492,6 +2531,7 @@
             </div>
         </div>
     </section>
+
 
 
 
